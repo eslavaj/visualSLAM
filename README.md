@@ -1,7 +1,7 @@
 # visualSLAM
 Contains C++ Opencv implementation of Visual SLAM (IN PROGRESS)
 
-Please note that this is a IN PROGRESS work.
+Please note that this is a IN PROGRESS work so there is a lot of death code, the code is not optimized and have unnecessary variables and other stuff only for debugging.
 
 Currently only Visual odometry is implemented:
 - I used ORB to extract keypoints.
