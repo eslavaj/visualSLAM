@@ -26,16 +26,13 @@ namespace kpproc
 class KpointExtractor
 {
 
-
-
-
 public:
 	static const unsigned int MIN_KPOINT_NBR = 35;
 
 	KpointExtractor(bool visuEnable=false):m_visuEnable(visuEnable){};
 
 	bool extractKpointDescriptors(const cv::Mat & inputImage);
-	void getResults(std::vector<cv::KeyPoint> & resKeypoints, cv::Mat & resDescriptors, cv::Mat & resImage);
+	void getResults(std::vector<cv::KeyPoint> & resKeypoints, cv::Mat & resDescriptors);
 
 	/*
 	void matchKpoints(std::string mpointStrategy="FUND");
@@ -47,14 +44,12 @@ public:
 
 	void visualize(double wait_uSec);
 
-
-private:
-	bool m_visuEnable;
-	//boost::circular_buffer<DataFrame> dataBuffer(dataBufferSize);
     std::vector<cv::KeyPoint> m_keypoints; // 2D keypoints within camera image
     cv::Mat m_descriptors; // keypoint descriptors
     cv::Mat m_frameImg;
 
+private:
+	bool m_visuEnable;
 
 
 #if 0

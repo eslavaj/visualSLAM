@@ -10,7 +10,7 @@
 
 #define DEBUG_LATENCY (1)
 
-
+#define ENABLE_VISU (1)
 
 
 #endif /* POSE_CONDITCOMPOPTIONS_H_ */

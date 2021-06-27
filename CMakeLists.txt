@@ -15,6 +15,11 @@ link_directories(${OpenCV_LIBRARY_DIRS} ${Boost_LIBRARY_DIRS})
 add_definitions(${OpenCV_DEFINITIONS} ${Boost_DEFINITIONS})
 
 # Executable for slamPoc
-add_executable(slamPoc src/campose_caminput_main.cpp 
-			                  src/pose/KeypointProcessorGpu.cpp src/pose/CameraPoseEstimator.cpp src/pose/triangulate.cpp)
+#add_executable(slamPoc src/campose_caminput_main.cpp 
+#			                  src/pose/KeypointProcessorGpu.cpp src/pose/CameraPoseEstimator.cpp src/pose/triangulate.cpp)
+			                  
+add_executable(slamPoc src/campose_images_kitty_main2.cpp 
+			                  src/pose/KpointExtractor.cpp src/pose/KpointMatcher.cpp src/pose/KpointProcessor.cpp
+			                  src/pose/CameraPoseEstimator.cpp)			                  
+			                  
 target_link_libraries(slamPoc ${OpenCV_LIBRARIES} ${Boost_LIBRARIES} pthread boost_system)

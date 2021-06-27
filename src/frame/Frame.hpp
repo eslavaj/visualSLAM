@@ -16,14 +16,23 @@
 //#include <opencv2/core/types.hpp>
 
 #include <boost/serialization/access.hpp>
-
+#include "conditCompOptions.h"
 
 class Frame
 {
-
+public:
+	Frame(cv::Mat inputImage):cameraImg(inputImage){
+		cv::Mat diag(cv::Mat::eye(3, 3, CV_64F));
+		//diag.at<double>(2,2) = -1;
+		diag.copyTo(rotationMatrix);
+		cv::Mat orig(cv::Mat::zeros(3, 1, CV_64F));
+		orig.copyTo(translationVector);
+		pose = cv::Affine3d(rotationMatrix, translationVector);
+	};
     cv::Mat cameraImg; // camera image
     double timestamp;
     std::vector<cv::KeyPoint> keypoints; // 2D keypoints within camera image
+    std::vector< cv::DMatch > matches;
     std::vector<cv::Point2f> refinedPointsCurr; //refined points of this frame after refining according matching
     cv::Mat descriptors; // keypoint descriptors
     std::vector<cv::Point2f> refinedPointsPrev; //refined points of the previous frame corresponding to refined points of this frame
@@ -36,6 +45,11 @@ class Frame
     cv::Mat rotationMatrix; //Rotation matrix relative to the previous frame
     cv::Mat translationVector; //Translation vector relative to the previous frame
     cv::Mat projectionMatrix; //Projection matrix that includes rotation and translation information
+
+    /*just for visualization*/
+	#ifdef ENABLE_VISU
+    cv::Affine3d pose;
+	#endif
 
 
     friend class boost::serialization::access;

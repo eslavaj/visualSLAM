@@ -26,12 +26,28 @@ class KpointMatcher
 
 public:
 
-	static const unsigned int MIN_KPMATCHS_NBR = 35;
-	KpointMatcher();
-	bool match(const cv::Mat & queryDescriptors, const cv::Mat & trainDescriptors);
+	static const unsigned int MIN_KPMATCHS_NBR = 32;
+	static const unsigned int MIN_HOMOGR_INLIERS_NBR = 16;
+	static constexpr double DIST_TO_EPILINE = 1.0;
+
+	KpointMatcher(){};
+	bool match(const cv::Mat & queryDescriptors, const cv::Mat & trainDescriptors,
+			   const std::vector<cv::KeyPoint>& queryKeypoints,
+			   const std::vector<cv::KeyPoint>& trainKeypoints);
+
+	void getResults(std::vector< cv::DMatch > & matches,
+					std::vector<cv::Point2f> & refinedPointsPrev,
+					std::vector<cv::Point2f> & refinedPointsCurr);
+
+	std::vector< cv::DMatch > m_matches;
+	std::vector<cv::Point2f> m_refinedPointsCurr;
+	std::vector<cv::Point2f> m_refinedPointsPrev;
 
 private:
-	std::vector< cv::DMatch > m_matches;
+	bool refineMatches(const cv::Mat & queryDescriptors, const cv::Mat & trainDescriptors,
+					   const std::vector<cv::KeyPoint>& queryKeypoints,
+					   const std::vector<cv::KeyPoint>& trainKeypoints,
+					   std::vector<cv::DMatch>& refinedMatches);
 
 };
 
