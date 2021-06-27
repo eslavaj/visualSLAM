@@ -9,20 +9,31 @@
 #define POSE_KPOINTPROCESSOR_HPP_
 
 #include "KpointExtractor.hpp"
+#include "KpointMatcher.hpp"
 
+
+namespace kpproc
+{
 
 class KpointProcessor
 {
 public:
-	KpointProcessor(bool visuEnable=false):m_visuEnable(visuEnable),extractor(visuEnable)
+	KpointProcessor(bool visuEnable=false):m_visuEnable(visuEnable),m_extractor(visuEnable)
 	{};
 
 private:
 	bool m_visuEnable;
-	KpointExtractor extractor;
-
+	KpointExtractor m_extractor;
+	KpointMatcher m_matcher;
 
 };
+
+
+
+
+}
+
+
 
 
 

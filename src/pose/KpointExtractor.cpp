@@ -9,6 +9,11 @@
 #include "KpointExtractor.hpp"
 
 using namespace std;
+using namespace kpproc;
+
+
+
+
 
 bool KpointExtractor::extractKpointDescriptors(const cv::Mat & inputImage)
 {
@@ -18,20 +23,18 @@ bool KpointExtractor::extractKpointDescriptors(const cv::Mat & inputImage)
 	#endif
 
 	/*Convert to grayscale*/
-    cv::Mat imgGray;
-    cv::cvtColor(inputImage, imgGray, cv::COLOR_BGR2GRAY);
+    cv::cvtColor(inputImage, m_frameImg, cv::COLOR_BGR2GRAY);
 
     cv::Ptr<cv::FeatureDetector> detector;
     detector = cv::ORB::create(300, 1.3f, 7, 31, 0, 2, cv::ORB::HARRIS_SCORE, 31, 20);
-    detector->detectAndCompute(imgGray, cv::Mat(), m_keypoints, m_descriptors);
+    detector->detectAndCompute(m_frameImg, cv::Mat(), m_keypoints, m_descriptors);
 
-    if(m_keypoints.size() < 35)
+    if(m_keypoints.size() < MIN_KPOINT_NBR)
     {
     	return false;
     }
     else
     {
-    	imgGray.copyTo(m_frameImg);
 		#if DEBUG_LATENCY
     	t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
     	cout << "#### KPOINT DESCRIPTOR EXTRACTION DONE " << m_keypoints.size() << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
@@ -49,5 +52,7 @@ void KpointExtractor::getResults(std::vector<cv::KeyPoint> & resKeypoints, cv::M
 	resImage = std::move(m_frameImg);
 
 }
+
+
 
 

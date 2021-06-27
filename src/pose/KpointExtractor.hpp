@@ -8,9 +8,6 @@
 #ifndef KPOINTEXTRACTOR_HPP_
 #define KPOINTEXTRACTOR_HPP_
 
-#include <string>
-
-#include <boost/circular_buffer.hpp>
 
 #include <opencv2/core/cuda.hpp>
 
@@ -21,11 +18,20 @@
 #include "conditCompOptions.h"
 
 
+
+namespace kpproc
+{
+
+
 class KpointExtractor
 {
 
 
+
+
 public:
+	static const unsigned int MIN_KPOINT_NBR = 35;
+
 	KpointExtractor(bool visuEnable=false):m_visuEnable(visuEnable){};
 
 	bool extractKpointDescriptors(const cv::Mat & inputImage);
@@ -68,6 +74,7 @@ private:
 };
 
 
+} /*namespace kpproc*/
 
 
 
