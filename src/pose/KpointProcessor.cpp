@@ -34,6 +34,8 @@ bool KpointProcessor::process()
 						 (m_frameBuffer.end()-2)->keypoints,
 						 (m_frameBuffer.end()-1)->keypoints) )
 	{
+
+
 		m_matcher.getResults( (m_frameBuffer.end()-1)->matches, (m_frameBuffer.end()-1)->refinedPointsPrev, (m_frameBuffer.end()-1)->refinedPointsCurr );
 		return true;
 	}else

@@ -26,7 +26,7 @@ bool KpointExtractor::extractKpointDescriptors(const cv::Mat & inputImage)
     cv::cvtColor(inputImage, m_frameImg, cv::COLOR_BGR2GRAY);
 
     cv::Ptr<cv::FeatureDetector> detector;
-    detector = cv::ORB::create(200, 1.3f, 7, 31, 0, 2, cv::ORB::HARRIS_SCORE, 31, 20);
+    detector = cv::ORB::create(500, 1.3f, 7, 31, 0, 2, cv::ORB::HARRIS_SCORE, 31, 20);
     detector->detectAndCompute(m_frameImg, cv::Mat(), m_keypoints, m_descriptors);
 
     if(m_keypoints.size() < MIN_KPOINT_NBR)

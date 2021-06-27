@@ -39,6 +39,7 @@ bool KpointMatcher::match(const cv::Mat & queryDescriptors, const cv::Mat & trai
 
     if(m_matches.size() < MIN_KPMATCHS_NBR)
     {
+    	std::cout << "----------------- "<< m_matches.size() << std::endl;
     	return false;
     }
     else

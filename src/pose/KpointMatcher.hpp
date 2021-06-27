@@ -26,9 +26,9 @@ class KpointMatcher
 
 public:
 
-	static const unsigned int MIN_KPMATCHS_NBR = 32;
-	static const unsigned int MIN_HOMOGR_INLIERS_NBR = 16;
-	static constexpr double DIST_TO_EPILINE = 1.0;
+	static const unsigned int MIN_KPMATCHS_NBR = 16;
+	static const unsigned int MIN_HOMOGR_INLIERS_NBR = 8;
+	static constexpr double DIST_TO_EPILINE = 3.0;
 
 	KpointMatcher(){};
 	bool match(const cv::Mat & queryDescriptors, const cv::Mat & trainDescriptors,

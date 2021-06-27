@@ -27,7 +27,7 @@ public:
 		diag.copyTo(rotationMatrix);
 		cv::Mat orig(cv::Mat::zeros(3, 1, CV_64F));
 		orig.copyTo(translationVector);
-		pose = cv::Affine3d(rotationMatrix, translationVector);
+		m_pose = cv::Affine3d(rotationMatrix, translationVector);
 	};
     cv::Mat cameraImg; // camera image
     double timestamp;
@@ -48,7 +48,7 @@ public:
 
     /*just for visualization*/
 	#ifdef ENABLE_VISU
-    cv::Affine3d pose;
+    cv::Affine3d m_pose;
 	#endif
 
 

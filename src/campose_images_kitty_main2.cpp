@@ -29,11 +29,20 @@ int showCameraRaw(cv::Mat &camFrame)
 	return 0;
 }
 
-int showImageRaw(cv::Mat &imageFrame)
+int showImageRaw(cv::Mat &imageFrame, double fps_processing)
 {
 	namedWindow( "Image input", WINDOW_NORMAL | WINDOW_KEEPRATIO ); // Create a window for display.
+
+	string fps_processing_text = std::to_string(fps_processing) + " fps";
+	cv::putText(imageFrame, //target image
+			fps_processing_text, //text
+			cv::Point(10, imageFrame.rows / 10), //top-left position
+			cv::FONT_HERSHEY_DUPLEX,
+			1.0,
+			CV_RGB(118, 185, 0), //font color
+			2);
+
 	imshow("Image input", imageFrame);
-	cout<<"Press any key"<<endl;
 	cv::waitKey(1);
 	return 0;
 }
@@ -54,9 +63,9 @@ int main(int argc, char** argv)
 	/* INIT VARIABLES AND DATA STRUCTURES */
 	string imgFileType = ".png";
 	int imgStartIndex = 1; // first file index to load (assumes Lidar and camera names have identical naming convention)
-	int imgEndIndex = 130;   // last file index to load
+	int imgEndIndex = 443;   // last file index to load
 	int imgFillWidth = 10;  // no. of digits which make up the file index (e.g. img-0001.png)
-    int frameBufferSize = 10;       // no. of images which are held in memory (ring buffer) at the same time
+    int frameBufferSize = 50;       // no. of images which are held in memory (ring buffer) at the same time
 
     boost::circular_buffer<Frame> dataBuffer(frameBufferSize);
 
@@ -74,7 +83,10 @@ int main(int argc, char** argv)
 
     	cv::Mat img;
     	img = cv::imread(imgFullFilename);
-    	showImageRaw(img);
+
+    	/*To measure time*/
+    	double t = (double)cv::getTickCount();
+    	double fps_processing;
 
     	dataBuffer.push_back(Frame(img));
 
@@ -83,9 +95,14 @@ int main(int argc, char** argv)
     		if( camposeestimator.calcCameraPose( (dataBuffer.end() - 1)->refinedPointsPrev, (dataBuffer.end() - 1)->refinedPointsCurr,
     										 (dataBuffer.end() - 1)->rotationMatrix, (dataBuffer.end() - 1)->translationVector) )
     		{
+    			t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
+    			fps_processing = 1.0/t;
     			camposeestimator.visualize();
     		}
     	}
+
+    	showImageRaw(img, fps_processing);
+
     }
 
     return 0;

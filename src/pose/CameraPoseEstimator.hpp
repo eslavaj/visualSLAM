@@ -24,7 +24,6 @@ namespace campose
 {
 
 
-#define UNDISTORTED_POINT_NBR (0)
 
 class CameraPoseEstimator
 {
@@ -50,7 +49,6 @@ public:
 
 
 	void visualize();
-	void visualizeCami(int i, boost::circular_buffer<Frame> & frameBuffer);
 
 	/*
 	void visualizeCami(int i);
@@ -72,6 +70,8 @@ private:
 
 	Camera m_camera;
 
+	cv::Affine3d m_lastKnowPose;
+
 	#ifdef ENABLE_VISU
 	cv::viz::Viz3d m_visualizer;
 	#endif
@@ -82,7 +82,7 @@ private:
 
 
 
-
+//   ./slamPoc /home/jeslava/msata/cpp_work/img_processing/slamPoC/2011_09_26_2/2011_09_26_drive_0051_extract/image_00/data
 
 
 
