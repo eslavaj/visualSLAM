@@ -20,7 +20,7 @@ TODO:
 ### These are preliminary results of odometry using Kitty dataset running on PC:
 
 
-![Visual odometry demo with Kitty dataset](media/camposedemo.gif)
+![Visual odometry demo with Kitty dataset](media/camposedemo1.gif)
 
 
 
