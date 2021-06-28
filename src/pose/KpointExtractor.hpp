@@ -9,7 +9,6 @@
 #define KPOINTEXTRACTOR_HPP_
 
 
-#include <opencv2/core/cuda.hpp>
 
 #include "dataStructures.h"
 

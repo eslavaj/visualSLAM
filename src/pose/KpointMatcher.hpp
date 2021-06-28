@@ -9,7 +9,6 @@
 #define POSE_KPOINTMATCHER_HPP_
 
 
-#include <opencv2/core/cuda.hpp>
 
 #include "dataStructures.h"
 

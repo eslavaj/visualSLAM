@@ -12,13 +12,23 @@
 #include <opencv2/viz.hpp>
 #include <iostream>
 #include <boost/circular_buffer.hpp>
+#include <thread>
+#include <mutex>
+#include <memory>
 
 #include "calibration_matrix.hpp"
 #include "KpointProcessor.hpp"
 #include "CameraPoseEstimator.hpp"
+#include "FrameProvider.hpp"
 
 using namespace cv;
 using namespace std;
+
+/*Global variables */
+cv::Mat globalFrame;
+mutex mtx;
+bool frameAvailable = false;
+
 
 int showCameraRaw(cv::Mat &camFrame)
 {
@@ -61,11 +71,9 @@ int main(int argc, char** argv)
 	string imgBasePath = argv[1];
 
 	/* INIT VARIABLES AND DATA STRUCTURES */
-	string imgFileType = ".png";
 	int imgStartIndex = 1; // first file index to load (assumes Lidar and camera names have identical naming convention)
 	int imgEndIndex = 443;   // last file index to load
-	int imgFillWidth = 10;  // no. of digits which make up the file index (e.g. img-0001.png)
-    int frameBufferSize = 50;       // no. of images which are held in memory (ring buffer) at the same time
+    int frameBufferSize = 50;       // no. of frames which are held in memory (ring buffer) at the same time
 
     boost::circular_buffer<Frame> dataBuffer(frameBufferSize);
 
@@ -73,22 +81,32 @@ int main(int argc, char** argv)
     Camera camera(A_calib, D_calib);
     campose::CameraPoseEstimator camposeestimator(camera, dataBuffer);
 
-    for (size_t imgIndex = 0; imgIndex <= imgEndIndex - imgStartIndex; imgIndex++)
+    //FrameProvider * frameProvider = new FrameProvider(mtx, frameAvailable, globalFrame);
+    FrameProvider frameProvider(mtx, frameAvailable, globalFrame);
+    thread frameProviderThread(&FrameProvider::captureFramesFromFolder, &frameProvider,imgBasePath, imgStartIndex, imgEndIndex);
+    frameProviderThread.detach();
+
+    while(cv::waitKey(2) != 27)
     {
-    	// assemble filenames for current index
-    	ostringstream imgNumber;
-    	imgNumber << setfill('0') << setw(imgFillWidth) << imgStartIndex + imgIndex*1;
-    	string imgFullFilename = imgBasePath + "/" + imgNumber.str() + imgFileType;
-    	//cout <<"image full name: "<<imgFullFilename<< endl;
+    	cv::Mat visuRawFrame;
+    	mtx.lock();
 
-    	cv::Mat img;
-    	img = cv::imread(imgFullFilename);
+    	if(frameAvailable)
+    	{
+    		globalFrame.copyTo(visuRawFrame);
+    		dataBuffer.push_back(Frame(globalFrame));
+    	}
+    	else
+    	{
+    		mtx.unlock();
+    		continue;
+    	}
 
-    	/*To measure time*/
+    	mtx.unlock();
+
+    	/*To measure fps*/
     	double t = (double)cv::getTickCount();
     	double fps_processing;
-
-    	dataBuffer.push_back(Frame(img));
 
     	if( kpprocessor.process() )
     	{
@@ -101,7 +119,7 @@ int main(int argc, char** argv)
     		}
     	}
 
-    	showImageRaw(img, fps_processing);
+    	showImageRaw(visuRawFrame, fps_processing);
 
     }
 

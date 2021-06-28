@@ -12,7 +12,6 @@
 #include <vector>
 #include <opencv2/core.hpp>
 #include "opencv2/opencv.hpp"
-#include <opencv2/core/cuda.hpp>
 //#include <opencv2/core/types.hpp>
 
 #include <boost/serialization/access.hpp>
@@ -21,7 +20,8 @@
 class Frame
 {
 public:
-	Frame(cv::Mat inputImage):cameraImg(inputImage){
+	Frame(cv::Mat inputImage){
+		inputImage.copyTo(cameraImg);
 		cv::Mat diag(cv::Mat::eye(3, 3, CV_64F));
 		//diag.at<double>(2,2) = -1;
 		diag.copyTo(rotationMatrix);
@@ -29,6 +29,7 @@ public:
 		orig.copyTo(translationVector);
 		m_pose = cv::Affine3d(rotationMatrix, translationVector);
 	};
+
     cv::Mat cameraImg; // camera image
     double timestamp;
     std::vector<cv::KeyPoint> keypoints; // 2D keypoints within camera image

@@ -1,8 +1,12 @@
 cmake_minimum_required (VERSION 2.6)
 
-project(slamPoc)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_definitions(-std=c++11)
+project(vodo)
+
+add_definitions(-std=c++14)
 
 set(CXX_FLAGS "-Wall -Wno-psabi -pthread")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
@@ -20,6 +24,6 @@ add_definitions(${OpenCV_DEFINITIONS} ${Boost_DEFINITIONS})
 			                  
 add_executable(vodo src/campose_images_kitty_main2.cpp 
 			                  src/pose/KpointExtractor.cpp src/pose/KpointMatcher.cpp src/pose/KpointProcessor.cpp
-			                  src/pose/CameraPoseEstimator.cpp)			                  
+			                  src/pose/CameraPoseEstimator.cpp src/frame/FrameProvider.cpp)			                  
 			                  
 target_link_libraries(vodo ${OpenCV_LIBRARIES} ${Boost_LIBRARIES} pthread boost_system)
