@@ -9,15 +9,9 @@
 #ifndef KPOINTEXTRACTOR_HPP_
 #define KPOINTEXTRACTOR_HPP_
 
-
-
-#include "dataStructures.h"
-
 #include "Frame.hpp"
 
 #include "conditCompOptions.h"
-
-
 
 namespace kpproc
 {

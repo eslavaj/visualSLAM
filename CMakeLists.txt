@@ -22,7 +22,7 @@ add_definitions(${OpenCV_DEFINITIONS} ${Boost_DEFINITIONS})
 #add_executable(slamPoc src/campose_caminput_main.cpp 
 #			                  src/pose/KeypointProcessorGpu.cpp src/pose/CameraPoseEstimator.cpp src/pose/triangulate.cpp)
 			                  
-add_executable(vodo src/campose_images_kitty_main2.cpp 
+add_executable(vodo src/campose_images_kitty_main.cpp 
 			                  src/pose/KpointExtractor.cpp src/pose/KpointMatcher.cpp src/pose/KpointProcessor.cpp
 			                  src/pose/CameraPoseEstimator.cpp src/frame/FrameProvider.cpp)			                  
 			                  

@@ -47,9 +47,10 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 	/*Check if camera has moved enough, if not then discard this frame*/
 	if(numberOfPtsPose < MIN_POSE_POINTS_NBR)
 	{
-		//cout << "##################### " << numberOfPtsPose << endl;
-		//m_frameBuffer.pop_back();
-		//cv::waitKey(1000);
+		/*
+		cout << "##################### " << numberOfPtsPose << endl;
+		m_frameBuffer.pop_back();
+		cv::waitKey(1000);*/
 		return false;
 	}
 
