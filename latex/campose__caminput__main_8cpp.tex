@@ -1,0 +1,71 @@
+\hypertarget{campose__caminput__main_8cpp}{}\section{src/campose\+\_\+caminput\+\_\+main.cpp File Reference}
+\label{campose__caminput__main_8cpp}\index{src/campose\+\_\+caminput\+\_\+main.\+cpp@{src/campose\+\_\+caminput\+\_\+main.\+cpp}}
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgcodecs.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/viz.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/circular\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}calibration\+\_\+matrix.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+Structures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Keypoint\+Processor\+Gpu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Camera\+Pose\+Estimator.\+hpp\char`\"{}}\newline
+Include dependency graph for campose\+\_\+caminput\+\_\+main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{campose__caminput__main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{campose__caminput__main_8cpp_a6c9ea8b891fe570df90a82d6d3741244}{show\+Camera\+Raw} (cv\+::\+Mat \&cam\+Frame)
+\item 
+int \hyperlink{campose__caminput__main_8cpp_a84cd556aac30a8e98bf9a5eb581cc139}{get\+Camera\+Fw\+Left} (cv\+::\+Mat $\ast$cam\+Frame, cv\+::\+Mat $\ast$cam\+Fw\+Left\+Frame)
+\item 
+int \hyperlink{campose__caminput__main_8cpp_adeece51f161493d2eb11c4165d4ac5f2}{get\+Camera\+Fw\+Right} (cv\+::\+Mat $\ast$cam\+Frame, cv\+::\+Mat $\ast$cam\+Fw\+Right\+Frame)
+\item 
+int \hyperlink{campose__caminput__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{campose__caminput__main_8cpp_a84cd556aac30a8e98bf9a5eb581cc139}\label{campose__caminput__main_8cpp_a84cd556aac30a8e98bf9a5eb581cc139}} 
+\index{campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}!get\+Camera\+Fw\+Left@{get\+Camera\+Fw\+Left}}
+\index{get\+Camera\+Fw\+Left@{get\+Camera\+Fw\+Left}!campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Camera\+Fw\+Left()}{getCameraFwLeft()}}
+{\footnotesize\ttfamily int get\+Camera\+Fw\+Left (\begin{DoxyParamCaption}\item[{cv\+::\+Mat $\ast$}]{cam\+Frame,  }\item[{cv\+::\+Mat $\ast$}]{cam\+Fw\+Left\+Frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{campose__caminput__main_8cpp_adeece51f161493d2eb11c4165d4ac5f2}\label{campose__caminput__main_8cpp_adeece51f161493d2eb11c4165d4ac5f2}} 
+\index{campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}!get\+Camera\+Fw\+Right@{get\+Camera\+Fw\+Right}}
+\index{get\+Camera\+Fw\+Right@{get\+Camera\+Fw\+Right}!campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Camera\+Fw\+Right()}{getCameraFwRight()}}
+{\footnotesize\ttfamily int get\+Camera\+Fw\+Right (\begin{DoxyParamCaption}\item[{cv\+::\+Mat $\ast$}]{cam\+Frame,  }\item[{cv\+::\+Mat $\ast$}]{cam\+Fw\+Right\+Frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{campose__caminput__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{campose__caminput__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}!main@{main}}
+\index{main@{main}!campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{campose__caminput__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{campose__caminput__main_8cpp_a6c9ea8b891fe570df90a82d6d3741244}\label{campose__caminput__main_8cpp_a6c9ea8b891fe570df90a82d6d3741244}} 
+\index{campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}!show\+Camera\+Raw@{show\+Camera\+Raw}}
+\index{show\+Camera\+Raw@{show\+Camera\+Raw}!campose\+\_\+caminput\+\_\+main.\+cpp@{campose\+\_\+caminput\+\_\+main.\+cpp}}
+\subsubsection{\texorpdfstring{show\+Camera\+Raw()}{showCameraRaw()}}
+{\footnotesize\ttfamily int show\+Camera\+Raw (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{cam\+Frame }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{campose__caminput__main_8cpp_a6c9ea8b891fe570df90a82d6d3741244_icgraph}
+\end{center}
+\end{figure}

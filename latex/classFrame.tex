@@ -1,0 +1,169 @@
+\hypertarget{classFrame}{}\section{Frame Class Reference}
+\label{classFrame}\index{Frame@{Frame}}
+
+
+{\ttfamily \#include $<$Frame.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFrame_af76c0928474fc6132e92511d8ac0791d}{Frame} (cv\+::\+Mat input\+Image)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classFrame_a2ad8e5090a32bab1894f2dcd84e50512}{serialize} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_af327ba7e56d6e4cd8f2917d36284ca4c}{camera\+Img}
+\item 
+double \hyperlink{classFrame_a360891231ed2b244f6caf3cfc8c16fb5}{timestamp}
+\item 
+std\+::vector$<$ cv\+::\+Key\+Point $>$ \hyperlink{classFrame_aec3f6874598eadb1e014709b28e48061}{keypoints}
+\item 
+std\+::vector$<$ cv\+::\+D\+Match $>$ \hyperlink{classFrame_ac7224127d7700699319bc8a8e84bef23}{matches}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classFrame_aee50f053bed60891e4582e3a478bcc1d}{refined\+Points\+Curr}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_a358eda120b8420754f30f69007e9fecb}{descriptors}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classFrame_a548f00afc5984a717684cc2916c0bd4c}{refined\+Points\+Prev}
+\item 
+std\+::vector$<$ cv\+::\+Vec2d $>$ \hyperlink{classFrame_a81aae40549c6b5548cf63d050f7a19e3}{undistorted\+Points\+Curr}
+\item 
+std\+::vector$<$ cv\+::\+Vec2d $>$ \hyperlink{classFrame_a9efe87123d623bfe06327036ee59e423}{undistorted\+Points\+Prev}
+\item 
+std\+::vector$<$ cv\+::\+Vec3d $>$ \hyperlink{classFrame_a387c7eff30bc00e6375fd9efa5510d22}{points3D}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_a07cc311d7b6e3dd5b964a4ea42a003b3}{essential\+Matrix}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_ae6b2810e1e9d8cc8a5ba7dff9378b019}{rotation\+Matrix}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_a5635d2b68ffd5456f6e7ad0f54d1ba29}{translation\+Vector}
+\item 
+cv\+::\+Mat \hyperlink{classFrame_acc5cd57f6b94c159a2f80ff6416dfb25}{projection\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFrame_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFrame_af76c0928474fc6132e92511d8ac0791d}\label{classFrame_af76c0928474fc6132e92511d8ac0791d}} 
+\index{Frame@{Frame}!Frame@{Frame}}
+\index{Frame@{Frame}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{Frame()}{Frame()}}
+{\footnotesize\ttfamily Frame\+::\+Frame (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{input\+Image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFrame_a2ad8e5090a32bab1894f2dcd84e50512}\label{classFrame_a2ad8e5090a32bab1894f2dcd84e50512}} 
+\index{Frame@{Frame}!serialize@{serialize}}
+\index{serialize@{serialize}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void Frame\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classFrame_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classFrame_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{Frame@{Frame}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classFrame_af327ba7e56d6e4cd8f2917d36284ca4c}\label{classFrame_af327ba7e56d6e4cd8f2917d36284ca4c}} 
+\index{Frame@{Frame}!camera\+Img@{camera\+Img}}
+\index{camera\+Img@{camera\+Img}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{camera\+Img}{cameraImg}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::camera\+Img}
+
+\mbox{\Hypertarget{classFrame_a358eda120b8420754f30f69007e9fecb}\label{classFrame_a358eda120b8420754f30f69007e9fecb}} 
+\index{Frame@{Frame}!descriptors@{descriptors}}
+\index{descriptors@{descriptors}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{descriptors}{descriptors}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::descriptors}
+
+\mbox{\Hypertarget{classFrame_a07cc311d7b6e3dd5b964a4ea42a003b3}\label{classFrame_a07cc311d7b6e3dd5b964a4ea42a003b3}} 
+\index{Frame@{Frame}!essential\+Matrix@{essential\+Matrix}}
+\index{essential\+Matrix@{essential\+Matrix}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{essential\+Matrix}{essentialMatrix}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::essential\+Matrix}
+
+\mbox{\Hypertarget{classFrame_aec3f6874598eadb1e014709b28e48061}\label{classFrame_aec3f6874598eadb1e014709b28e48061}} 
+\index{Frame@{Frame}!keypoints@{keypoints}}
+\index{keypoints@{keypoints}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{keypoints}{keypoints}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Key\+Point$>$ Frame\+::keypoints}
+
+\mbox{\Hypertarget{classFrame_ac7224127d7700699319bc8a8e84bef23}\label{classFrame_ac7224127d7700699319bc8a8e84bef23}} 
+\index{Frame@{Frame}!matches@{matches}}
+\index{matches@{matches}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{matches}{matches}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+D\+Match $>$ Frame\+::matches}
+
+\mbox{\Hypertarget{classFrame_a387c7eff30bc00e6375fd9efa5510d22}\label{classFrame_a387c7eff30bc00e6375fd9efa5510d22}} 
+\index{Frame@{Frame}!points3D@{points3D}}
+\index{points3D@{points3D}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{points3D}{points3D}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Vec3d$>$ Frame\+::points3D}
+
+\mbox{\Hypertarget{classFrame_acc5cd57f6b94c159a2f80ff6416dfb25}\label{classFrame_acc5cd57f6b94c159a2f80ff6416dfb25}} 
+\index{Frame@{Frame}!projection\+Matrix@{projection\+Matrix}}
+\index{projection\+Matrix@{projection\+Matrix}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{projection\+Matrix}{projectionMatrix}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::projection\+Matrix}
+
+\mbox{\Hypertarget{classFrame_aee50f053bed60891e4582e3a478bcc1d}\label{classFrame_aee50f053bed60891e4582e3a478bcc1d}} 
+\index{Frame@{Frame}!refined\+Points\+Curr@{refined\+Points\+Curr}}
+\index{refined\+Points\+Curr@{refined\+Points\+Curr}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{refined\+Points\+Curr}{refinedPointsCurr}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ Frame\+::refined\+Points\+Curr}
+
+\mbox{\Hypertarget{classFrame_a548f00afc5984a717684cc2916c0bd4c}\label{classFrame_a548f00afc5984a717684cc2916c0bd4c}} 
+\index{Frame@{Frame}!refined\+Points\+Prev@{refined\+Points\+Prev}}
+\index{refined\+Points\+Prev@{refined\+Points\+Prev}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{refined\+Points\+Prev}{refinedPointsPrev}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ Frame\+::refined\+Points\+Prev}
+
+\mbox{\Hypertarget{classFrame_ae6b2810e1e9d8cc8a5ba7dff9378b019}\label{classFrame_ae6b2810e1e9d8cc8a5ba7dff9378b019}} 
+\index{Frame@{Frame}!rotation\+Matrix@{rotation\+Matrix}}
+\index{rotation\+Matrix@{rotation\+Matrix}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{rotation\+Matrix}{rotationMatrix}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::rotation\+Matrix}
+
+\mbox{\Hypertarget{classFrame_a360891231ed2b244f6caf3cfc8c16fb5}\label{classFrame_a360891231ed2b244f6caf3cfc8c16fb5}} 
+\index{Frame@{Frame}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily double Frame\+::timestamp}
+
+\mbox{\Hypertarget{classFrame_a5635d2b68ffd5456f6e7ad0f54d1ba29}\label{classFrame_a5635d2b68ffd5456f6e7ad0f54d1ba29}} 
+\index{Frame@{Frame}!translation\+Vector@{translation\+Vector}}
+\index{translation\+Vector@{translation\+Vector}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{translation\+Vector}{translationVector}}
+{\footnotesize\ttfamily cv\+::\+Mat Frame\+::translation\+Vector}
+
+\mbox{\Hypertarget{classFrame_a81aae40549c6b5548cf63d050f7a19e3}\label{classFrame_a81aae40549c6b5548cf63d050f7a19e3}} 
+\index{Frame@{Frame}!undistorted\+Points\+Curr@{undistorted\+Points\+Curr}}
+\index{undistorted\+Points\+Curr@{undistorted\+Points\+Curr}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{undistorted\+Points\+Curr}{undistortedPointsCurr}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Vec2d$>$ Frame\+::undistorted\+Points\+Curr}
+
+\mbox{\Hypertarget{classFrame_a9efe87123d623bfe06327036ee59e423}\label{classFrame_a9efe87123d623bfe06327036ee59e423}} 
+\index{Frame@{Frame}!undistorted\+Points\+Prev@{undistorted\+Points\+Prev}}
+\index{undistorted\+Points\+Prev@{undistorted\+Points\+Prev}!Frame@{Frame}}
+\subsubsection{\texorpdfstring{undistorted\+Points\+Prev}{undistortedPointsPrev}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Vec2d$>$ Frame\+::undistorted\+Points\+Prev}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/frame/\hyperlink{Frame_8hpp}{Frame.\+hpp}\end{DoxyCompactItemize}

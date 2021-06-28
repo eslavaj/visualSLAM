@@ -1,0 +1,50 @@
+\hypertarget{KeypointProcessorGpu_8hpp}{}\section{src/pose/\+Keypoint\+Processor\+Gpu.hpp File Reference}
+\label{KeypointProcessorGpu_8hpp}\index{src/pose/\+Keypoint\+Processor\+Gpu.\+hpp@{src/pose/\+Keypoint\+Processor\+Gpu.\+hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$boost/circular\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/cuda.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}data\+Structures.\+h\char`\"{}}\newline
+Include dependency graph for Keypoint\+Processor\+Gpu.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{KeypointProcessorGpu_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{KeypointProcessorGpu_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classKeypointProcessorGpu}{Keypoint\+Processor\+Gpu}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceRefineReturnCode}{Refine\+Return\+Code}
+\item 
+ \hyperlink{namespaceExtractReturnCode}{Extract\+Return\+Code}
+\item 
+ \hyperlink{namespaceFrameSTS}{Frame\+S\+TS}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceRefineReturnCode_a54e2cd5f4af90ff2df55bf63455d1959}{Refine\+Return\+Code\+::\+Refine\+Return\+Code} \{ \hyperlink{namespaceRefineReturnCode_a54e2cd5f4af90ff2df55bf63455d1959af7afdc3f9a9d0e3ee3e177cf5f5f9841}{Refine\+Return\+Code\+::\+OK} = 0, 
+\hyperlink{namespaceRefineReturnCode_a54e2cd5f4af90ff2df55bf63455d1959aa7e9b732c19c32b516e07f10aedd581c}{Refine\+Return\+Code\+::\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+I\+N\+L\+I\+E\+RS} = -\/1
+ \}
+\item 
+enum \hyperlink{namespaceExtractReturnCode_a88d3d56de717f250bf48793769dd57ba}{Extract\+Return\+Code\+::\+Extract\+Return\+Code} \{ \hyperlink{namespaceExtractReturnCode_a88d3d56de717f250bf48793769dd57baa35e3ef3fef8fcb5cc35f89bcdbf50d5a}{Extract\+Return\+Code\+::\+OK} = 0, 
+\hyperlink{namespaceExtractReturnCode_a88d3d56de717f250bf48793769dd57baacc16e5e7772072e33bf927abd7c422c6}{Extract\+Return\+Code\+::\+N\+O\+T\+\_\+\+E\+N\+O\+U\+G\+H\+\_\+\+K\+E\+Y\+P\+O\+I\+N\+TS} = -\/1
+ \}
+\item 
+enum \hyperlink{namespaceFrameSTS_aa00e1583f3bc837ad3fbfb9beaaa0692}{Frame\+S\+T\+S\+::\+Frame\+S\+TS} \{ \hyperlink{namespaceFrameSTS_aa00e1583f3bc837ad3fbfb9beaaa0692a8608718df5a4cb285e39336cb325e5b9}{Frame\+S\+T\+S\+::\+D\+I\+S\+C\+A\+R\+D\+ED} = -\/1, 
+\hyperlink{namespaceFrameSTS_aa00e1583f3bc837ad3fbfb9beaaa0692a8320d47ecf7adbfb6dedd682bf1820db}{Frame\+S\+T\+S\+::\+N\+O\+T\+\_\+\+Y\+E\+T\+\_\+\+P\+R\+O\+C\+E\+S\+S\+ED} = 0, 
+\hyperlink{namespaceFrameSTS_aa00e1583f3bc837ad3fbfb9beaaa0692a68c0ae2c9cca0d93791d8493061f4d95}{Frame\+S\+T\+S\+::\+P\+R\+O\+C\+E\+S\+S\+ED} = 1
+ \}
+\end{DoxyCompactItemize}

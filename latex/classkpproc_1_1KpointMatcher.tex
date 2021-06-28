@@ -1,0 +1,134 @@
+\hypertarget{classkpproc_1_1KpointMatcher}{}\section{kpproc\+:\+:Kpoint\+Matcher Class Reference}
+\label{classkpproc_1_1KpointMatcher}\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+
+
+{\ttfamily \#include $<$Kpoint\+Matcher.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}{Kpoint\+Matcher} ()
+\item 
+bool \hyperlink{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}{match} (const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints)
+\item 
+void \hyperlink{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}{get\+Results} (std\+::vector$<$ cv\+::\+D\+Match $>$ \&matches, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Prev, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Curr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+D\+Match $>$ \hyperlink{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}{m\+\_\+matches}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}{m\+\_\+refined\+Points\+Curr}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}{m\+\_\+refined\+Points\+Prev}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \hyperlink{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR} = 16
+\item 
+static const unsigned int \hyperlink{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR} = 8
+\item 
+static constexpr double \hyperlink{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE} = 3.\+0
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}{refine\+Matches} (const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints, std\+::vector$<$ cv\+::\+D\+Match $>$ \&refined\+Matches)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}\label{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!Kpoint\+Matcher@{Kpoint\+Matcher}}
+\index{Kpoint\+Matcher@{Kpoint\+Matcher}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{Kpoint\+Matcher()}{KpointMatcher()}}
+{\footnotesize\ttfamily kpproc\+::\+Kpoint\+Matcher\+::\+Kpoint\+Matcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}\label{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!get\+Results@{get\+Results}}
+\index{get\+Results@{get\+Results}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
+{\footnotesize\ttfamily void Kpoint\+Matcher\+::get\+Results (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{matches,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Prev,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Curr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}\label{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!match@{match}}
+\index{match@{match}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily bool Kpoint\+Matcher\+::match (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{query\+Descriptors,  }\item[{const cv\+::\+Mat \&}]{train\+Descriptors,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}\label{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!refine\+Matches@{refine\+Matches}}
+\index{refine\+Matches@{refine\+Matches}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{refine\+Matches()}{refineMatches()}}
+{\footnotesize\ttfamily bool Kpoint\+Matcher\+::refine\+Matches (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{query\+Descriptors,  }\item[{const cv\+::\+Mat \&}]{train\+Descriptors,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints,  }\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{refined\+Matches }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}\label{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE@{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}}
+\index{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE@{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}{DIST\_TO\_EPILINE}}
+{\footnotesize\ttfamily constexpr double kpproc\+::\+Kpoint\+Matcher\+::\+D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE = 3.\+0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}\label{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+matches@{m\+\_\+matches}}
+\index{m\+\_\+matches@{m\+\_\+matches}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{m\+\_\+matches}{m\_matches}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+D\+Match $>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+matches}
+
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}\label{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Curr@{m\+\_\+refined\+Points\+Curr}}
+\index{m\+\_\+refined\+Points\+Curr@{m\+\_\+refined\+Points\+Curr}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{m\+\_\+refined\+Points\+Curr}{m\_refinedPointsCurr}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Curr}
+
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}\label{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Prev@{m\+\_\+refined\+Points\+Prev}}
+\index{m\+\_\+refined\+Points\+Prev@{m\+\_\+refined\+Points\+Prev}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{m\+\_\+refined\+Points\+Prev}{m\_refinedPointsPrev}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Prev}
+
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}\label{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}}
+\index{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}{MIN\_HOMOGR\_INLIERS\_NBR}}
+{\footnotesize\ttfamily const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}\label{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}} 
+\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}}
+\index{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}{MIN\_KPMATCHS\_NBR}}
+{\footnotesize\ttfamily const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR = 16\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/pose/\hyperlink{KpointMatcher_8hpp}{Kpoint\+Matcher.\+hpp}\item 
+src/pose/\hyperlink{KpointMatcher_8cpp}{Kpoint\+Matcher.\+cpp}\end{DoxyCompactItemize}

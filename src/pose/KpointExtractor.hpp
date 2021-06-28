@@ -1,9 +1,10 @@
-/*
- * KeypointProcessorGpu.hpp
+/**
  *
- *  Created on: Jul 29, 2020
- *      Author: jeslava
+ * @file KpointExtractor.hpp
+ * @brief  Header file for lass to extract keypoints.
+ *
  */
+
 
 #ifndef KPOINTEXTRACTOR_HPP_
 #define KPOINTEXTRACTOR_HPP_
@@ -21,49 +22,58 @@
 namespace kpproc
 {
 
-
+/**
+ * Keypoint extraction class: given an image it extracts the keypoints and provide the corresponding descriptors
+ *
+ */
 class KpointExtractor
 {
 
 public:
-	static const unsigned int MIN_KPOINT_NBR = 35;
 
+	/**
+	 * @brief Keypoint extractor constructor.
+	 *
+	 * @param visuEnable: enable/disable keypoints visualization
+	 *
+	 * @return true on success.
+	 */
 	KpointExtractor(bool visuEnable=false):m_visuEnable(visuEnable){};
 
+	/**
+	 * @brief This functions detect keypoints and generate descriptors.
+	 *
+	 * @param inputImage: The image where the keypoints will be extracted from
+	 *
+	 * @return true on success.
+	 */
 	bool extractKpointDescriptors(const cv::Mat & inputImage);
+
+	/**
+	 * @brief This function retrieve keypoints and their descriptors.
+	 *
+	 * @param resKeypoints: where the keypoints will be stored
+	 * @param resDescriptors: where the descriptors will be stored
+	 *
+	 * @return true on success.
+	 */
 	void getResults(std::vector<cv::KeyPoint> & resKeypoints, cv::Mat & resDescriptors);
 
-	/*
-	void matchKpoints(std::string mpointStrategy="FUND");
-	RefineReturnCode::RefineReturnCode refineMatches(const std::vector<cv::DMatch>& matches,
-		                 std::vector<cv::KeyPoint>& keypoints1,
-						 std::vector<cv::KeyPoint>& keypoints2,
-					     std::vector<cv::DMatch>& outMatches,
-						 std::string matchRefineStrategy);*/
-
+	/**
+	 * @brief To visualize keypoints - NOT IMPLEMENTED.
+	 *
+	 * @return void.
+	 */
 	void visualize(double wait_uSec);
 
-    std::vector<cv::KeyPoint> m_keypoints; // 2D keypoints within camera image
-    cv::Mat m_descriptors; // keypoint descriptors
-    cv::Mat m_frameImg;
+
+	static const unsigned int MIN_KPOINT_NBR = 35;	/*!< Minimum number of keypoints to consider this frame or image is useful */
+    cv::Mat m_frameImg; 							/*!< The image of this frame in cv::Mat format */
 
 private:
-	bool m_visuEnable;
-
-
-#if 0
-	cv::Mat m_fundMatrix;
-	cv::Mat m_homographyMatrix;
-	double m_distToEpipLine = 1.0;
-	double m_ransacConfid = 0.9;
-	bool m_refineFund = true; /*Refine fundamental matrix*/
-	bool m_refineMatches = true; /*Refine the matches*/
-	bool m_calcRelVertDisp = false; /*If true then algorithm will calculate relative vertical displacement assuming
-	 	 	 	 	 	 	 	 	 that camera orientation is constant between 2 consecutive images.
-	 	 	 	 	 	 	 	 	 This function is useful only for tests under specific conditions (constant camera orientation)*/
-
-	FrameSTS::FrameSTS previousFrameSts = FrameSTS::NOT_YET_PROCESSED;
-#endif
+	bool m_visuEnable;								/*!< To store visualization enable or disable status*/
+    std::vector<cv::KeyPoint> m_keypoints; 			/*!< Keypoints within camera image */
+    cv::Mat m_descriptors; 							/*!< keypoint descriptors associated to keypoints listed in \ref m_keypoints */
 
 };
 

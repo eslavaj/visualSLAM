@@ -1,8 +1,8 @@
-/*
- * KpointExtractor.cpp
+/**
  *
- *  Created on: Jun 25, 2021
- *      Author: user3
+ * @file KpointExtractor.cpp
+ * @brief keypoints extractor implementation file.
+ *
  */
 
 
@@ -10,10 +10,6 @@
 
 using namespace std;
 using namespace kpproc;
-
-
-
-
 
 bool KpointExtractor::extractKpointDescriptors(const cv::Mat & inputImage)
 {
@@ -51,7 +47,4 @@ void KpointExtractor::getResults(std::vector<cv::KeyPoint> & resKeypoints, cv::M
 	resDescriptors = std::move(m_descriptors);
 
 }
-
-
-
 

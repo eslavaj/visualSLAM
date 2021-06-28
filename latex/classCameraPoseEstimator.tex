@@ -1,0 +1,186 @@
+\hypertarget{classCameraPoseEstimator}{}\section{Camera\+Pose\+Estimator Class Reference}
+\label{classCameraPoseEstimator}\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+
+
+{\ttfamily \#include $<$Camera\+Pose\+Estimator2.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCameraPoseEstimator_a441b62732e43db66f31cb231cd6a0f68}{Camera\+Pose\+Estimator} (boost\+::circular\+\_\+buffer$<$ \hyperlink{structDataFrame}{Data\+Frame} $>$ \&data\+Frame\+Buffer, cv\+::\+Mat camera\+Intri\+Param, cv\+::\+Mat camera\+Distort\+Param, cv\+::viz\+::\+Viz3d \&visualizer)
+\item 
+void \hyperlink{classCameraPoseEstimator_a2ffa3353dc0ca9913a35c3c018cf19da}{calc\+Camera\+Pose} ()
+\item 
+void \hyperlink{classCameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}{visualize} ()
+\item 
+void \hyperlink{classCameraPoseEstimator_a77d2c2226c4f11ec9e65f3552086abff}{visualize\+Cami} (int i)
+\item 
+void \hyperlink{classCameraPoseEstimator_af77110f690dea3934f419858cd89fb3b}{visualize\+LastN} (int n)
+\item 
+void \hyperlink{classCameraPoseEstimator_a8d19513e75924b7e3e56e79a97c534a5}{visualize\+Last\+Frames} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{classCameraPoseEstimator_a399cc39501f20c5fb80ca5010041ae20}{m\+\_\+\+A\+\_\+calib}
+\item 
+cv\+::\+Mat \hyperlink{classCameraPoseEstimator_a794f0ecbbbb73d92878c04c757adfe69}{m\+\_\+\+D\+\_\+calib}
+\item 
+cv\+::\+Matx33f \hyperlink{classCameraPoseEstimator_a8147e1e69f66b58e6d84fa4999045c58}{m\+\_\+\+A\+\_\+calib33f}
+\item 
+boost\+::circular\+\_\+buffer$<$ \hyperlink{structDataFrame}{Data\+Frame} $>$ \& \hyperlink{classCameraPoseEstimator_aba5c3d97eb6188c08a7b0121c38d1f76}{m\+\_\+data\+Frame\+Buffer}
+\item 
+cv\+::viz\+::\+Viz3d \hyperlink{classCameraPoseEstimator_ac2465c62e9e4937183fd77e9788d9f8b}{m\+\_\+visualizer}
+\item 
+bool \hyperlink{classCameraPoseEstimator_a78bb2fadb2826d7ec83d756be0b0fa92}{ena\+\_\+transl\+\_\+factor} =false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCameraPoseEstimator_a441b62732e43db66f31cb231cd6a0f68}\label{classCameraPoseEstimator_a441b62732e43db66f31cb231cd6a0f68}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{Camera\+Pose\+Estimator()}{CameraPoseEstimator()}}
+{\footnotesize\ttfamily Camera\+Pose\+Estimator\+::\+Camera\+Pose\+Estimator (\begin{DoxyParamCaption}\item[{boost\+::circular\+\_\+buffer$<$ \hyperlink{structDataFrame}{Data\+Frame} $>$ \&}]{data\+Frame\+Buffer,  }\item[{cv\+::\+Mat}]{camera\+Intri\+Param,  }\item[{cv\+::\+Mat}]{camera\+Distort\+Param,  }\item[{cv\+::viz\+::\+Viz3d \&}]{visualizer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_a441b62732e43db66f31cb231cd6a0f68_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCameraPoseEstimator_a2ffa3353dc0ca9913a35c3c018cf19da}\label{classCameraPoseEstimator_a2ffa3353dc0ca9913a35c3c018cf19da}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!calc\+Camera\+Pose@{calc\+Camera\+Pose}}
+\index{calc\+Camera\+Pose@{calc\+Camera\+Pose}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{calc\+Camera\+Pose()}{calcCameraPose()}}
+{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::calc\+Camera\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classCameraPoseEstimator_a2ffa3353dc0ca9913a35c3c018cf19da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_a2ffa3353dc0ca9913a35c3c018cf19da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}\label{classCameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!visualize@{visualize}}
+\index{visualize@{visualize}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct the scene Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classCameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCameraPoseEstimator_a77d2c2226c4f11ec9e65f3552086abff}\label{classCameraPoseEstimator_a77d2c2226c4f11ec9e65f3552086abff}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!visualize\+Cami@{visualize\+Cami}}
+\index{visualize\+Cami@{visualize\+Cami}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{visualize\+Cami()}{visualizeCami()}}
+{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::visualize\+Cami (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Construct the scene Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classCameraPoseEstimator_a77d2c2226c4f11ec9e65f3552086abff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_a77d2c2226c4f11ec9e65f3552086abff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCameraPoseEstimator_a8d19513e75924b7e3e56e79a97c534a5}\label{classCameraPoseEstimator_a8d19513e75924b7e3e56e79a97c534a5}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!visualize\+Last\+Frames@{visualize\+Last\+Frames}}
+\index{visualize\+Last\+Frames@{visualize\+Last\+Frames}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{visualize\+Last\+Frames()}{visualizeLastFrames()}}
+{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::visualize\+Last\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_a8d19513e75924b7e3e56e79a97c534a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCameraPoseEstimator_af77110f690dea3934f419858cd89fb3b}\label{classCameraPoseEstimator_af77110f690dea3934f419858cd89fb3b}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!visualize\+LastN@{visualize\+LastN}}
+\index{visualize\+LastN@{visualize\+LastN}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{visualize\+Last\+N()}{visualizeLastN()}}
+{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::visualize\+LastN (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCameraPoseEstimator_af77110f690dea3934f419858cd89fb3b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCameraPoseEstimator_a78bb2fadb2826d7ec83d756be0b0fa92}\label{classCameraPoseEstimator_a78bb2fadb2826d7ec83d756be0b0fa92}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!ena\+\_\+transl\+\_\+factor@{ena\+\_\+transl\+\_\+factor}}
+\index{ena\+\_\+transl\+\_\+factor@{ena\+\_\+transl\+\_\+factor}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{ena\+\_\+transl\+\_\+factor}{ena\_transl\_factor}}
+{\footnotesize\ttfamily bool Camera\+Pose\+Estimator\+::ena\+\_\+transl\+\_\+factor =false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCameraPoseEstimator_a399cc39501f20c5fb80ca5010041ae20}\label{classCameraPoseEstimator_a399cc39501f20c5fb80ca5010041ae20}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!m\+\_\+\+A\+\_\+calib@{m\+\_\+\+A\+\_\+calib}}
+\index{m\+\_\+\+A\+\_\+calib@{m\+\_\+\+A\+\_\+calib}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{m\+\_\+\+A\+\_\+calib}{m\_A\_calib}}
+{\footnotesize\ttfamily cv\+::\+Mat Camera\+Pose\+Estimator\+::m\+\_\+\+A\+\_\+calib\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCameraPoseEstimator_a8147e1e69f66b58e6d84fa4999045c58}\label{classCameraPoseEstimator_a8147e1e69f66b58e6d84fa4999045c58}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!m\+\_\+\+A\+\_\+calib33f@{m\+\_\+\+A\+\_\+calib33f}}
+\index{m\+\_\+\+A\+\_\+calib33f@{m\+\_\+\+A\+\_\+calib33f}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{m\+\_\+\+A\+\_\+calib33f}{m\_A\_calib33f}}
+{\footnotesize\ttfamily cv\+::\+Matx33f Camera\+Pose\+Estimator\+::m\+\_\+\+A\+\_\+calib33f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCameraPoseEstimator_a794f0ecbbbb73d92878c04c757adfe69}\label{classCameraPoseEstimator_a794f0ecbbbb73d92878c04c757adfe69}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!m\+\_\+\+D\+\_\+calib@{m\+\_\+\+D\+\_\+calib}}
+\index{m\+\_\+\+D\+\_\+calib@{m\+\_\+\+D\+\_\+calib}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{m\+\_\+\+D\+\_\+calib}{m\_D\_calib}}
+{\footnotesize\ttfamily cv\+::\+Mat Camera\+Pose\+Estimator\+::m\+\_\+\+D\+\_\+calib\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCameraPoseEstimator_aba5c3d97eb6188c08a7b0121c38d1f76}\label{classCameraPoseEstimator_aba5c3d97eb6188c08a7b0121c38d1f76}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!m\+\_\+data\+Frame\+Buffer@{m\+\_\+data\+Frame\+Buffer}}
+\index{m\+\_\+data\+Frame\+Buffer@{m\+\_\+data\+Frame\+Buffer}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{m\+\_\+data\+Frame\+Buffer}{m\_dataFrameBuffer}}
+{\footnotesize\ttfamily boost\+::circular\+\_\+buffer$<$\hyperlink{structDataFrame}{Data\+Frame}$>$\& Camera\+Pose\+Estimator\+::m\+\_\+data\+Frame\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCameraPoseEstimator_ac2465c62e9e4937183fd77e9788d9f8b}\label{classCameraPoseEstimator_ac2465c62e9e4937183fd77e9788d9f8b}} 
+\index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!m\+\_\+visualizer@{m\+\_\+visualizer}}
+\index{m\+\_\+visualizer@{m\+\_\+visualizer}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
+\subsubsection{\texorpdfstring{m\+\_\+visualizer}{m\_visualizer}}
+{\footnotesize\ttfamily cv\+::viz\+::\+Viz3d Camera\+Pose\+Estimator\+::m\+\_\+visualizer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/pose/\hyperlink{CameraPoseEstimator2_8hpp}{Camera\+Pose\+Estimator2.\+hpp}\item 
+src/pose/\hyperlink{CameraPoseEstimator2_8cpp}{Camera\+Pose\+Estimator2.\+cpp}\end{DoxyCompactItemize}

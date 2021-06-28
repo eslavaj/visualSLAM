@@ -1,0 +1,23 @@
+Contains C++ Opencv implementation of Visual S\+L\+AM (IN P\+R\+O\+G\+R\+E\+SS)
+
+Please note that this is a IN P\+R\+O\+G\+R\+E\+SS work.
+
+Currently only Visual odometry is implemented\+:
+\begin{DoxyItemize}
+\item I used O\+RB to extract keypoints.
+\item Keypoint matching between consecutives frames.
+\item I used projective geometry constraints to refine matches (Fundamental matrix and homography).
+\item Once matches are relatively OK I can use camera calibration parameters to find Essential matrix, camera pose and triangulate the keypoints to estimate their 3D position up to scale. During this process a final oulier rejection is performed to keep only few but sure points as landmarks.
+\end{DoxyItemize}
+
+T\+O\+DO\+:
+\begin{DoxyItemize}
+\item Local optimization with g2o or other optimization framework.
+\item Define a good data structure and representation for mapping (for embedded platforms)
+\item Global optimization
+\item Use all this for path planning
+\end{DoxyItemize}
+
+\subsubsection*{These are preliminary results of odometry using Kitty dataset running on N\+Vidia Jetson T\+X2 board\+:}
+
+ 

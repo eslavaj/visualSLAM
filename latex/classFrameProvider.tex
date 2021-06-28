@@ -1,0 +1,104 @@
+\hypertarget{classFrameProvider}{}\section{Frame\+Provider Class Reference}
+\label{classFrameProvider}\index{Frame\+Provider@{Frame\+Provider}}
+
+
+{\ttfamily \#include $<$Frame\+Provider.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}{Frame\+Provider} (std\+::mutex \&\hyperlink{campose__images__kitty__main2_8cpp_a29ac681ec3efa9e30e1ab1ab251b47f9}{mtx}, bool \&frame\+Avail, cv\+::\+Mat \&frame)
+\item 
+void \hyperlink{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}{capture\+Frames\+From\+Folder} (const std\+::string folder\+Path, size\+\_\+t start\+Idx, size\+\_\+t end\+Idx)
+\item 
+void \hyperlink{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}{capture\+Frames\+From\+Argus\+Cam} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::thread $\ast$ \hyperlink{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}{m\+\_\+capture\+Frame\+Thread}
+\item 
+std\+::mutex \& \hyperlink{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}{m\+\_\+mutex}
+\item 
+bool \& \hyperlink{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}{m\+\_\+frame\+Available}
+\item 
+cv\+::\+Mat \& \hyperlink{classFrameProvider_afc074a4806d6406cbb395f98494a2172}{m\+\_\+frame}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}\label{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}} 
+\index{Frame\+Provider@{Frame\+Provider}!Frame\+Provider@{Frame\+Provider}}
+\index{Frame\+Provider@{Frame\+Provider}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{Frame\+Provider()}{FrameProvider()}}
+{\footnotesize\ttfamily Frame\+Provider\+::\+Frame\+Provider (\begin{DoxyParamCaption}\item[{std\+::mutex \&}]{mtx,  }\item[{bool \&}]{frame\+Avail,  }\item[{cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}\label{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}} 
+\index{Frame\+Provider@{Frame\+Provider}!capture\+Frames\+From\+Argus\+Cam@{capture\+Frames\+From\+Argus\+Cam}}
+\index{capture\+Frames\+From\+Argus\+Cam@{capture\+Frames\+From\+Argus\+Cam}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{capture\+Frames\+From\+Argus\+Cam()}{captureFramesFromArgusCam()}}
+{\footnotesize\ttfamily void Frame\+Provider\+::capture\+Frames\+From\+Argus\+Cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}\label{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}} 
+\index{Frame\+Provider@{Frame\+Provider}!capture\+Frames\+From\+Folder@{capture\+Frames\+From\+Folder}}
+\index{capture\+Frames\+From\+Folder@{capture\+Frames\+From\+Folder}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{capture\+Frames\+From\+Folder()}{captureFramesFromFolder()}}
+{\footnotesize\ttfamily void Frame\+Provider\+::capture\+Frames\+From\+Folder (\begin{DoxyParamCaption}\item[{const std\+::string}]{folder\+Path,  }\item[{size\+\_\+t}]{start\+Idx,  }\item[{size\+\_\+t}]{end\+Idx }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFrameProvider_aa8334a484db470ee01b8718ab05ca997_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}\label{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}} 
+\index{Frame\+Provider@{Frame\+Provider}!m\+\_\+capture\+Frame\+Thread@{m\+\_\+capture\+Frame\+Thread}}
+\index{m\+\_\+capture\+Frame\+Thread@{m\+\_\+capture\+Frame\+Thread}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{m\+\_\+capture\+Frame\+Thread}{m\_captureFrameThread}}
+{\footnotesize\ttfamily std\+::thread$\ast$ Frame\+Provider\+::m\+\_\+capture\+Frame\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFrameProvider_afc074a4806d6406cbb395f98494a2172}\label{classFrameProvider_afc074a4806d6406cbb395f98494a2172}} 
+\index{Frame\+Provider@{Frame\+Provider}!m\+\_\+frame@{m\+\_\+frame}}
+\index{m\+\_\+frame@{m\+\_\+frame}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{m\+\_\+frame}{m\_frame}}
+{\footnotesize\ttfamily cv\+::\+Mat\& Frame\+Provider\+::m\+\_\+frame\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}\label{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}} 
+\index{Frame\+Provider@{Frame\+Provider}!m\+\_\+frame\+Available@{m\+\_\+frame\+Available}}
+\index{m\+\_\+frame\+Available@{m\+\_\+frame\+Available}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{m\+\_\+frame\+Available}{m\_frameAvailable}}
+{\footnotesize\ttfamily bool\& Frame\+Provider\+::m\+\_\+frame\+Available\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}\label{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}} 
+\index{Frame\+Provider@{Frame\+Provider}!m\+\_\+mutex@{m\+\_\+mutex}}
+\index{m\+\_\+mutex@{m\+\_\+mutex}!Frame\+Provider@{Frame\+Provider}}
+\subsubsection{\texorpdfstring{m\+\_\+mutex}{m\_mutex}}
+{\footnotesize\ttfamily std\+::mutex\& Frame\+Provider\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/frame/\hyperlink{FrameProvider_8hpp}{Frame\+Provider.\+hpp}\item 
+src/frame/\hyperlink{FrameProvider_8cpp}{Frame\+Provider.\+cpp}\end{DoxyCompactItemize}

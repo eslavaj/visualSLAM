@@ -71,8 +71,8 @@ int main(int argc, char** argv)
 	string imgBasePath = argv[1];
 
 	/* INIT VARIABLES AND DATA STRUCTURES */
-	int imgStartIndex = 1; // first file index to load (assumes Lidar and camera names have identical naming convention)
-	int imgEndIndex = 443;   // last file index to load
+	int imgStartIndex = 1; /* first file index */
+	int imgEndIndex = 443;   /* last file index */
     int frameBufferSize = 50;       // no. of frames which are held in memory (ring buffer) at the same time
 
     boost::circular_buffer<Frame> dataBuffer(frameBufferSize);
@@ -81,7 +81,6 @@ int main(int argc, char** argv)
     Camera camera(A_calib, D_calib);
     campose::CameraPoseEstimator camposeestimator(camera, dataBuffer);
 
-    //FrameProvider * frameProvider = new FrameProvider(mtx, frameAvailable, globalFrame);
     FrameProvider frameProvider(mtx, frameAvailable, globalFrame);
     thread frameProviderThread(&FrameProvider::captureFramesFromFolder, &frameProvider,imgBasePath, imgStartIndex, imgEndIndex);
     frameProviderThread.detach();
