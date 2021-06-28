@@ -23,6 +23,12 @@ TODO:
 ![Visual odometry demo with Kitty dataset](media/camposedemo.gif)
 
 
+## Commit legend:
+feat: a change to implement a new feature
+chore: a change does not impact functionnality like clean up the code
+doc: a change to add documentation
+fix: a change correct a bug, generally linked to an issue 
+
 
 
 
