@@ -36,7 +36,6 @@ public:
 	 *
 	 * @param visuEnable: enable/disable keypoints visualization
 	 *
-	 * @return true on success.
 	 */
 	KpointExtractor(bool visuEnable=false):m_visuEnable(visuEnable){};
 

@@ -1,11 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$classFrameProvider.html#aa8334a484db470ee01b8718ab05ca997" title="FrameProvider::captureFrames\lFromFolder" alt="" coords="110,39,313,80"/>
-<area shape="rect" id="node3" href="$classkpproc_1_1KpointProcessor.html#a35bdf2239f6742875bbc64338488075a" title="kpproc::KpointProcessor\l::process" alt="" coords="129,104,294,145"/>
-<area shape="rect" id="node8" href="$classcampose_1_1CameraPoseEstimator.html#a975c193e745e9150f0726e188a2daa1e" title="campose::CameraPoseEstimator\l::calcCameraPose" alt="" coords="104,169,319,211"/>
-<area shape="rect" id="node9" href="$classcampose_1_1CameraPoseEstimator.html#ac1b95d78d7d3f4c8032d8e494034420c" title="campose::CameraPoseEstimator\l::visualize" alt="" coords="104,235,319,276"/>
-<area shape="rect" id="node10" href="$campose__images__kitty__main2_8cpp.html#aea0169e6cd467049d7ff7db330281eb7" title="showImageRaw" alt="" coords="153,301,269,327"/>
+<area shape="rect" id="node2" href="$classFrameProvider.html#aa8334a484db470ee01b8718ab05ca997" title="FrameProvider::captureFrames\lFromFolder" alt="" coords="110,37,313,79"/>
+<area shape="rect" id="node3" href="$classkpproc_1_1KpointProcessor.html#a35bdf2239f6742875bbc64338488075a" title="kpproc::KpointProcessor\l::process" alt="" coords="129,103,294,144"/>
+<area shape="rect" id="node8" href="$classcampose_1_1CameraPoseEstimator.html#a975c193e745e9150f0726e188a2daa1e" title="campose::CameraPoseEstimator\l::calcCameraPose" alt="" coords="104,168,319,209"/>
+<area shape="rect" id="node9" href="$classcampose_1_1CameraPoseEstimator.html#ac1b95d78d7d3f4c8032d8e494034420c" title="campose::CameraPoseEstimator\l::visualize" alt="" coords="104,233,319,275"/>
+<area shape="rect" id="node10" href="$campose__images__kitty__main2_8cpp.html#aea0169e6cd467049d7ff7db330281eb7" title="showImageRaw" alt="" coords="153,299,269,326"/>
 <area shape="rect" id="node4" href="$classkpproc_1_1KpointExtractor.html#ade1efa4e540390775ed7158f57ca9618" title="This functions detect keypoints and generate descriptors. " alt="" coords="367,5,541,47"/>
 <area shape="rect" id="node5" href="$classkpproc_1_1KpointExtractor.html#a167e3596663206cb24e9eefe54baf4be" title="This function retrieve keypoints and their descriptors. " alt="" coords="375,71,533,112"/>
-<area shape="rect" id="node6" href="$classkpproc_1_1KpointMatcher.html#a21caea2a00576784b2fc90dd652870ed" title="kpproc::KpointMatcher\l::match" alt="" coords="377,136,531,177"/>
-<area shape="rect" id="node7" href="$classkpproc_1_1KpointMatcher.html#a02f6944a8401a2a14bb5ce42073389b0" title="kpproc::KpointMatcher\l::getResults" alt="" coords="377,201,531,243"/>
+<area shape="rect" id="node6" href="$classkpproc_1_1KpointMatcher.html#a21caea2a00576784b2fc90dd652870ed" title="This functions match the keypoints according their descriptors. Note this function matches considerin..." alt="" coords="377,136,531,177"/>
+<area shape="rect" id="node7" href="$classkpproc_1_1KpointMatcher.html#a02f6944a8401a2a14bb5ce42073389b0" title="This functions retrieve the matches and the refined coordinates of the keypoints. ..." alt="" coords="377,201,531,243"/>
 </map>

@@ -27,11 +27,16 @@ cv\+::\+Mat \& \hyperlink{classFrameProvider_afc074a4806d6406cbb395f98494a2172}{
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}\label{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}} 
 \index{Frame\+Provider@{Frame\+Provider}!Frame\+Provider@{Frame\+Provider}}
 \index{Frame\+Provider@{Frame\+Provider}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{Frame\+Provider()}{FrameProvider()}}
-{\footnotesize\ttfamily Frame\+Provider\+::\+Frame\+Provider (\begin{DoxyParamCaption}\item[{std\+::mutex \&}]{mtx,  }\item[{bool \&}]{frame\+Avail,  }\item[{cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection[{\texorpdfstring{Frame\+Provider(std\+::mutex \&mtx, bool \&frame\+Avail, cv\+::\+Mat \&frame)}{FrameProvider(std::mutex &mtx, bool &frameAvail, cv::Mat &frame)}}]{\setlength{\rightskip}{0pt plus 5cm}Frame\+Provider\+::\+Frame\+Provider (
+\begin{DoxyParamCaption}
+\item[{std\+::mutex \&}]{mtx, }
+\item[{bool \&}]{frame\+Avail, }
+\item[{cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}{}\label{classFrameProvider_a03f142a7ea5878a32fec67f2b85f22fd}
+
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -42,12 +47,17 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}\label{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}} 
 \index{Frame\+Provider@{Frame\+Provider}!capture\+Frames\+From\+Argus\+Cam@{capture\+Frames\+From\+Argus\+Cam}}
 \index{capture\+Frames\+From\+Argus\+Cam@{capture\+Frames\+From\+Argus\+Cam}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{capture\+Frames\+From\+Argus\+Cam()}{captureFramesFromArgusCam()}}
-{\footnotesize\ttfamily void Frame\+Provider\+::capture\+Frames\+From\+Argus\+Cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{capture\+Frames\+From\+Argus\+Cam()}{captureFramesFromArgusCam()}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+Provider\+::capture\+Frames\+From\+Argus\+Cam (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}{}\label{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c}
+
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -56,11 +66,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classFrameProvider_a15097906b20d2d564b9bfea82c2f956c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}\label{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}} 
+
+
 \index{Frame\+Provider@{Frame\+Provider}!capture\+Frames\+From\+Folder@{capture\+Frames\+From\+Folder}}
 \index{capture\+Frames\+From\+Folder@{capture\+Frames\+From\+Folder}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{capture\+Frames\+From\+Folder()}{captureFramesFromFolder()}}
-{\footnotesize\ttfamily void Frame\+Provider\+::capture\+Frames\+From\+Folder (\begin{DoxyParamCaption}\item[{const std\+::string}]{folder\+Path,  }\item[{size\+\_\+t}]{start\+Idx,  }\item[{size\+\_\+t}]{end\+Idx }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{capture\+Frames\+From\+Folder(const std\+::string folder\+Path, size\+\_\+t start\+Idx, size\+\_\+t end\+Idx)}{captureFramesFromFolder(const std::string folderPath, size_t startIdx, size_t endIdx)}}]{\setlength{\rightskip}{0pt plus 5cm}void Frame\+Provider\+::capture\+Frames\+From\+Folder (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{folder\+Path, }
+\item[{size\+\_\+t}]{start\+Idx, }
+\item[{size\+\_\+t}]{end\+Idx}
+\end{DoxyParamCaption}
+)}\hypertarget{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}{}\label{classFrameProvider_aa8334a484db470ee01b8718ab05ca997}
+
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -71,31 +88,21 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}\label{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}} 
 \index{Frame\+Provider@{Frame\+Provider}!m\+\_\+capture\+Frame\+Thread@{m\+\_\+capture\+Frame\+Thread}}
 \index{m\+\_\+capture\+Frame\+Thread@{m\+\_\+capture\+Frame\+Thread}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{m\+\_\+capture\+Frame\+Thread}{m\_captureFrameThread}}
-{\footnotesize\ttfamily std\+::thread$\ast$ Frame\+Provider\+::m\+\_\+capture\+Frame\+Thread\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classFrameProvider_afc074a4806d6406cbb395f98494a2172}\label{classFrameProvider_afc074a4806d6406cbb395f98494a2172}} 
+\subsubsection[{\texorpdfstring{m\+\_\+capture\+Frame\+Thread}{m_captureFrameThread}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread$\ast$ Frame\+Provider\+::m\+\_\+capture\+Frame\+Thread\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}{}\label{classFrameProvider_a08d38afae37b22f5c0117bdc950d83b4}
 \index{Frame\+Provider@{Frame\+Provider}!m\+\_\+frame@{m\+\_\+frame}}
 \index{m\+\_\+frame@{m\+\_\+frame}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{m\+\_\+frame}{m\_frame}}
-{\footnotesize\ttfamily cv\+::\+Mat\& Frame\+Provider\+::m\+\_\+frame\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}\label{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}} 
+\subsubsection[{\texorpdfstring{m\+\_\+frame}{m_frame}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat\& Frame\+Provider\+::m\+\_\+frame\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFrameProvider_afc074a4806d6406cbb395f98494a2172}{}\label{classFrameProvider_afc074a4806d6406cbb395f98494a2172}
 \index{Frame\+Provider@{Frame\+Provider}!m\+\_\+frame\+Available@{m\+\_\+frame\+Available}}
 \index{m\+\_\+frame\+Available@{m\+\_\+frame\+Available}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{m\+\_\+frame\+Available}{m\_frameAvailable}}
-{\footnotesize\ttfamily bool\& Frame\+Provider\+::m\+\_\+frame\+Available\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}\label{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}} 
+\subsubsection[{\texorpdfstring{m\+\_\+frame\+Available}{m_frameAvailable}}]{\setlength{\rightskip}{0pt plus 5cm}bool\& Frame\+Provider\+::m\+\_\+frame\+Available\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}{}\label{classFrameProvider_a46df01a978cd8d56cd4ffafb676d8a44}
 \index{Frame\+Provider@{Frame\+Provider}!m\+\_\+mutex@{m\+\_\+mutex}}
 \index{m\+\_\+mutex@{m\+\_\+mutex}!Frame\+Provider@{Frame\+Provider}}
-\subsubsection{\texorpdfstring{m\+\_\+mutex}{m\_mutex}}
-{\footnotesize\ttfamily std\+::mutex\& Frame\+Provider\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
-
+\subsubsection[{\texorpdfstring{m\+\_\+mutex}{m_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex\& Frame\+Provider\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}{}\label{classFrameProvider_a613fbc156614a7936ef4e05d8c9b0219}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

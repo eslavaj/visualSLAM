@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for campose\+:\+:Camera\+Pose\+Estimator\+:
-\nopagebreak
+Collaboration diagram for campose\+:\+:Camera\+Pose\+Estimator\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,11 +41,15 @@ cv\+::viz\+::\+Viz3d \hyperlink{classcampose_1_1CameraPoseEstimator_a36fa39fcb86
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_ac2e15d64ea58fbb2fe08b575a599a280}\label{classcampose_1_1CameraPoseEstimator_ac2e15d64ea58fbb2fe08b575a599a280}} 
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}}
 \index{Camera\+Pose\+Estimator@{Camera\+Pose\+Estimator}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{Camera\+Pose\+Estimator()}{CameraPoseEstimator()}}
-{\footnotesize\ttfamily campose\+::\+Camera\+Pose\+Estimator\+::\+Camera\+Pose\+Estimator (\begin{DoxyParamCaption}\item[{const \hyperlink{classCamera}{Camera} \&}]{camera,  }\item[{boost\+::circular\+\_\+buffer$<$ \hyperlink{classFrame}{Frame} $>$ \&}]{frame\+Buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection[{\texorpdfstring{Camera\+Pose\+Estimator(const Camera \&camera, boost\+::circular\+\_\+buffer$<$ Frame $>$ \&frame\+Buffer)}{CameraPoseEstimator(const Camera &camera, boost::circular_buffer< Frame > &frameBuffer)}}]{\setlength{\rightskip}{0pt plus 5cm}campose\+::\+Camera\+Pose\+Estimator\+::\+Camera\+Pose\+Estimator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Camera} \&}]{camera, }
+\item[{boost\+::circular\+\_\+buffer$<$ {\bf Frame} $>$ \&}]{frame\+Buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classcampose_1_1CameraPoseEstimator_ac2e15d64ea58fbb2fe08b575a599a280}{}\label{classcampose_1_1CameraPoseEstimator_ac2e15d64ea58fbb2fe08b575a599a280}
+
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -57,12 +60,20 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_a975c193e745e9150f0726e188a2daa1e}\label{classcampose_1_1CameraPoseEstimator_a975c193e745e9150f0726e188a2daa1e}} 
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!calc\+Camera\+Pose@{calc\+Camera\+Pose}}
 \index{calc\+Camera\+Pose@{calc\+Camera\+Pose}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{calc\+Camera\+Pose()}{calcCameraPose()}}
-{\footnotesize\ttfamily bool campose\+::\+Camera\+Pose\+Estimator\+::calc\+Camera\+Pose (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Prev,  }\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Curr,  }\item[{cv\+::\+Mat \&}]{rotation\+Matrix,  }\item[{cv\+::\+Mat \&}]{translation\+Vector }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{calc\+Camera\+Pose(const std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Prev, const std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Curr, cv\+::\+Mat \&rotation\+Matrix, cv\+::\+Mat \&translation\+Vector)}{calcCameraPose(const std::vector< cv::Point2f > &refinedPointsPrev, const std::vector< cv::Point2f > &refinedPointsCurr, cv::Mat &rotationMatrix, cv::Mat &translationVector)}}]{\setlength{\rightskip}{0pt plus 5cm}bool campose\+::\+Camera\+Pose\+Estimator\+::calc\+Camera\+Pose (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Prev, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Curr, }
+\item[{cv\+::\+Mat \&}]{rotation\+Matrix, }
+\item[{cv\+::\+Mat \&}]{translation\+Vector}
+\end{DoxyParamCaption}
+)}\hypertarget{classcampose_1_1CameraPoseEstimator_a975c193e745e9150f0726e188a2daa1e}{}\label{classcampose_1_1CameraPoseEstimator_a975c193e745e9150f0726e188a2daa1e}
+
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -71,11 +82,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classcampose_1_1CameraPoseEstimator_a975c193e745e9150f0726e188a2daa1e_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}\label{classcampose_1_1CameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}} 
+
+
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!visualize@{visualize}}
 \index{visualize@{visualize}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{visualize()}{visualize()}}
-{\footnotesize\ttfamily void Camera\+Pose\+Estimator\+::visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{visualize()}{visualize()}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Pose\+Estimator\+::visualize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcampose_1_1CameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}{}\label{classcampose_1_1CameraPoseEstimator_ac1b95d78d7d3f4c8032d8e494034420c}
+
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -86,37 +102,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_a57173dd1d143e7ac26a039c078204bef}\label{classcampose_1_1CameraPoseEstimator_a57173dd1d143e7ac26a039c078204bef}} 
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!m\+\_\+camera@{m\+\_\+camera}}
 \index{m\+\_\+camera@{m\+\_\+camera}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{m\+\_\+camera}{m\_camera}}
-{\footnotesize\ttfamily \hyperlink{classCamera}{Camera} campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_a0e0b0b1b2c9f2c4bbfbc7260021ae723}\label{classcampose_1_1CameraPoseEstimator_a0e0b0b1b2c9f2c4bbfbc7260021ae723}} 
+\subsubsection[{\texorpdfstring{m\+\_\+camera}{m_camera}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+camera\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcampose_1_1CameraPoseEstimator_a57173dd1d143e7ac26a039c078204bef}{}\label{classcampose_1_1CameraPoseEstimator_a57173dd1d143e7ac26a039c078204bef}
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!m\+\_\+frame\+Buffer@{m\+\_\+frame\+Buffer}}
 \index{m\+\_\+frame\+Buffer@{m\+\_\+frame\+Buffer}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{m\+\_\+frame\+Buffer}{m\_frameBuffer}}
-{\footnotesize\ttfamily boost\+::circular\+\_\+buffer$<$\hyperlink{classFrame}{Frame}$>$\& campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+frame\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_a6afdbcffb70bbe52d945045e1c85fc7d}\label{classcampose_1_1CameraPoseEstimator_a6afdbcffb70bbe52d945045e1c85fc7d}} 
+\subsubsection[{\texorpdfstring{m\+\_\+frame\+Buffer}{m_frameBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::circular\+\_\+buffer$<${\bf Frame}$>$\& campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+frame\+Buffer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcampose_1_1CameraPoseEstimator_a0e0b0b1b2c9f2c4bbfbc7260021ae723}{}\label{classcampose_1_1CameraPoseEstimator_a0e0b0b1b2c9f2c4bbfbc7260021ae723}
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!m\+\_\+last\+Know\+Pose@{m\+\_\+last\+Know\+Pose}}
 \index{m\+\_\+last\+Know\+Pose@{m\+\_\+last\+Know\+Pose}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{m\+\_\+last\+Know\+Pose}{m\_lastKnowPose}}
-{\footnotesize\ttfamily cv\+::\+Affine3d campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+last\+Know\+Pose\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_a36fa39fcb86bb8758846d1dd0aaa14e9}\label{classcampose_1_1CameraPoseEstimator_a36fa39fcb86bb8758846d1dd0aaa14e9}} 
+\subsubsection[{\texorpdfstring{m\+\_\+last\+Know\+Pose}{m_lastKnowPose}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Affine3d campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+last\+Know\+Pose\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcampose_1_1CameraPoseEstimator_a6afdbcffb70bbe52d945045e1c85fc7d}{}\label{classcampose_1_1CameraPoseEstimator_a6afdbcffb70bbe52d945045e1c85fc7d}
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!m\+\_\+visualizer@{m\+\_\+visualizer}}
 \index{m\+\_\+visualizer@{m\+\_\+visualizer}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{m\+\_\+visualizer}{m\_visualizer}}
-{\footnotesize\ttfamily cv\+::viz\+::\+Viz3d campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+visualizer\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classcampose_1_1CameraPoseEstimator_ab9495b3f0c0be7276c853bfb97a40f3e}\label{classcampose_1_1CameraPoseEstimator_ab9495b3f0c0be7276c853bfb97a40f3e}} 
+\subsubsection[{\texorpdfstring{m\+\_\+visualizer}{m_visualizer}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::viz\+::\+Viz3d campose\+::\+Camera\+Pose\+Estimator\+::m\+\_\+visualizer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classcampose_1_1CameraPoseEstimator_a36fa39fcb86bb8758846d1dd0aaa14e9}{}\label{classcampose_1_1CameraPoseEstimator_a36fa39fcb86bb8758846d1dd0aaa14e9}
 \index{campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}!M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR}}
 \index{M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR}!campose\+::\+Camera\+Pose\+Estimator@{campose\+::\+Camera\+Pose\+Estimator}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR}{MIN\_POSE\_POINTS\_NBR}}
-{\footnotesize\ttfamily const unsigned int campose\+::\+Camera\+Pose\+Estimator\+::\+M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR = 8\hspace{0.3cm}{\ttfamily [static]}}
-
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR}{MIN_POSE_POINTS_NBR}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int campose\+::\+Camera\+Pose\+Estimator\+::\+M\+I\+N\+\_\+\+P\+O\+S\+E\+\_\+\+P\+O\+I\+N\+T\+S\+\_\+\+N\+BR = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classcampose_1_1CameraPoseEstimator_ab9495b3f0c0be7276c853bfb97a40f3e}{}\label{classcampose_1_1CameraPoseEstimator_ab9495b3f0c0be7276c853bfb97a40f3e}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

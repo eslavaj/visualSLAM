@@ -40,24 +40,24 @@ cv\+::\+Mat \hyperlink{classkpproc_1_1KpointExtractor_a27bff1246cd947b3d84272a4b
 Keypoint extraction class\+: given an image it extracts the keypoints and provide the corresponding descriptors 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointExtractor_ad05a95e4da00ee5d14a4c1b99141cd08}\label{classkpproc_1_1KpointExtractor_ad05a95e4da00ee5d14a4c1b99141cd08}} 
 \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!Kpoint\+Extractor@{Kpoint\+Extractor}}
 \index{Kpoint\+Extractor@{Kpoint\+Extractor}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{Kpoint\+Extractor()}{KpointExtractor()}}
-{\footnotesize\ttfamily kpproc\+::\+Kpoint\+Extractor\+::\+Kpoint\+Extractor (\begin{DoxyParamCaption}\item[{bool}]{visu\+Enable = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
+\subsubsection[{\texorpdfstring{Kpoint\+Extractor(bool visu\+Enable=false)}{KpointExtractor(bool visuEnable=false)}}]{\setlength{\rightskip}{0pt plus 5cm}kpproc\+::\+Kpoint\+Extractor\+::\+Kpoint\+Extractor (
+\begin{DoxyParamCaption}
+\item[{bool}]{visu\+Enable = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classkpproc_1_1KpointExtractor_ad05a95e4da00ee5d14a4c1b99141cd08}{}\label{classkpproc_1_1KpointExtractor_ad05a95e4da00ee5d14a4c1b99141cd08}
 
 
 Keypoint extractor constructor. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em visu\+Enable} & enable/disable keypoints visualization\\
+{\em visu\+Enable} & enable/disable keypoints visualization \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true on success. 
-\end{DoxyReturn}
+
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -67,13 +67,16 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointExtractor_ade1efa4e540390775ed7158f57ca9618}\label{classkpproc_1_1KpointExtractor_ade1efa4e540390775ed7158f57ca9618}} 
 \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!extract\+Kpoint\+Descriptors@{extract\+Kpoint\+Descriptors}}
 \index{extract\+Kpoint\+Descriptors@{extract\+Kpoint\+Descriptors}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{extract\+Kpoint\+Descriptors()}{extractKpointDescriptors()}}
-{\footnotesize\ttfamily bool Kpoint\+Extractor\+::extract\+Kpoint\+Descriptors (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Image }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{extract\+Kpoint\+Descriptors(const cv\+::\+Mat \&input\+Image)}{extractKpointDescriptors(const cv::Mat &inputImage)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Kpoint\+Extractor\+::extract\+Kpoint\+Descriptors (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{input\+Image}
+\end{DoxyParamCaption}
+)}\hypertarget{classkpproc_1_1KpointExtractor_ade1efa4e540390775ed7158f57ca9618}{}\label{classkpproc_1_1KpointExtractor_ade1efa4e540390775ed7158f57ca9618}
 
 
 This functions detect keypoints and generate descriptors. 
@@ -86,6 +89,8 @@ This functions detect keypoints and generate descriptors.
 \begin{DoxyReturn}{Returns}
 true on success. 
 \end{DoxyReturn}
+
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -93,12 +98,16 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classkpproc_1_1KpointExtractor_ade1efa4e540390775ed7158f57ca9618_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classkpproc_1_1KpointExtractor_a167e3596663206cb24e9eefe54baf4be}\label{classkpproc_1_1KpointExtractor_a167e3596663206cb24e9eefe54baf4be}} 
+
+
 \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!get\+Results@{get\+Results}}
 \index{get\+Results@{get\+Results}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
-{\footnotesize\ttfamily void Kpoint\+Extractor\+::get\+Results (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{res\+Keypoints,  }\item[{cv\+::\+Mat \&}]{res\+Descriptors }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{get\+Results(std\+::vector$<$ cv\+::\+Key\+Point $>$ \&res\+Keypoints, cv\+::\+Mat \&res\+Descriptors)}{getResults(std::vector< cv::KeyPoint > &resKeypoints, cv::Mat &resDescriptors)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kpoint\+Extractor\+::get\+Results (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{res\+Keypoints, }
+\item[{cv\+::\+Mat \&}]{res\+Descriptors}
+\end{DoxyParamCaption}
+)}\hypertarget{classkpproc_1_1KpointExtractor_a167e3596663206cb24e9eefe54baf4be}{}\label{classkpproc_1_1KpointExtractor_a167e3596663206cb24e9eefe54baf4be}
 
 
 This function retrieve keypoints and their descriptors. 
@@ -113,6 +122,8 @@ This function retrieve keypoints and their descriptors.
 \begin{DoxyReturn}{Returns}
 true on success. 
 \end{DoxyReturn}
+
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -120,12 +131,15 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classkpproc_1_1KpointExtractor_a167e3596663206cb24e9eefe54baf4be_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classkpproc_1_1KpointExtractor_a52e3033d4c95115f76315c228d3a1350}\label{classkpproc_1_1KpointExtractor_a52e3033d4c95115f76315c228d3a1350}} 
+
+
 \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!visualize@{visualize}}
 \index{visualize@{visualize}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{visualize()}{visualize()}}
-{\footnotesize\ttfamily void kpproc\+::\+Kpoint\+Extractor\+::visualize (\begin{DoxyParamCaption}\item[{double}]{wait\+\_\+u\+Sec }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{visualize(double wait\+\_\+u\+Sec)}{visualize(double wait_uSec)}}]{\setlength{\rightskip}{0pt plus 5cm}void kpproc\+::\+Kpoint\+Extractor\+::visualize (
+\begin{DoxyParamCaption}
+\item[{double}]{wait\+\_\+u\+Sec}
+\end{DoxyParamCaption}
+)}\hypertarget{classkpproc_1_1KpointExtractor_a52e3033d4c95115f76315c228d3a1350}{}\label{classkpproc_1_1KpointExtractor_a52e3033d4c95115f76315c228d3a1350}
 
 
 To visualize keypoints -\/ N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED. 
@@ -133,6 +147,8 @@ To visualize keypoints -\/ N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED.
 \begin{DoxyReturn}{Returns}
 void. 
 \end{DoxyReturn}
+
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -142,37 +158,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointExtractor_a27bff1246cd947b3d84272a4b06b6498}\label{classkpproc_1_1KpointExtractor_a27bff1246cd947b3d84272a4b06b6498}} 
 \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+descriptors@{m\+\_\+descriptors}}
 \index{m\+\_\+descriptors@{m\+\_\+descriptors}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{m\+\_\+descriptors}{m\_descriptors}}
-{\footnotesize\ttfamily cv\+::\+Mat kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+descriptors\hspace{0.3cm}{\ttfamily [private]}}
-
-keypoint descriptors associated to keypoints listed in \hyperlink{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}{m\+\_\+keypoints} \mbox{\Hypertarget{classkpproc_1_1KpointExtractor_ac03e195051022be4aab2a008d05475c4}\label{classkpproc_1_1KpointExtractor_ac03e195051022be4aab2a008d05475c4}} 
-\index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+frame\+Img@{m\+\_\+frame\+Img}}
+\subsubsection[{\texorpdfstring{m\+\_\+descriptors}{m_descriptors}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+descriptors\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointExtractor_a27bff1246cd947b3d84272a4b06b6498}{}\label{classkpproc_1_1KpointExtractor_a27bff1246cd947b3d84272a4b06b6498}
+keypoint descriptors associated to keypoints listed in \hyperlink{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}{m\+\_\+keypoints} \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+frame\+Img@{m\+\_\+frame\+Img}}
 \index{m\+\_\+frame\+Img@{m\+\_\+frame\+Img}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{m\+\_\+frame\+Img}{m\_frameImg}}
-{\footnotesize\ttfamily cv\+::\+Mat kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+frame\+Img}
-
-The image of this frame in cv\+::\+Mat format \mbox{\Hypertarget{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}\label{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}} 
-\index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+keypoints@{m\+\_\+keypoints}}
+\subsubsection[{\texorpdfstring{m\+\_\+frame\+Img}{m_frameImg}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+frame\+Img}\hypertarget{classkpproc_1_1KpointExtractor_ac03e195051022be4aab2a008d05475c4}{}\label{classkpproc_1_1KpointExtractor_ac03e195051022be4aab2a008d05475c4}
+The image of this frame in cv\+::\+Mat format \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+keypoints@{m\+\_\+keypoints}}
 \index{m\+\_\+keypoints@{m\+\_\+keypoints}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{m\+\_\+keypoints}{m\_keypoints}}
-{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Key\+Point$>$ kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+keypoints\hspace{0.3cm}{\ttfamily [private]}}
-
-Keypoints within camera image \mbox{\Hypertarget{classkpproc_1_1KpointExtractor_ab0f534203a246814b163aa3dffeef1b5}\label{classkpproc_1_1KpointExtractor_ab0f534203a246814b163aa3dffeef1b5}} 
-\index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+visu\+Enable@{m\+\_\+visu\+Enable}}
+\subsubsection[{\texorpdfstring{m\+\_\+keypoints}{m_keypoints}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$cv\+::\+Key\+Point$>$ kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+keypoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}{}\label{classkpproc_1_1KpointExtractor_ace5a9a7c0bc1cea6e181b72f41588205}
+Keypoints within camera image \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!m\+\_\+visu\+Enable@{m\+\_\+visu\+Enable}}
 \index{m\+\_\+visu\+Enable@{m\+\_\+visu\+Enable}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{m\+\_\+visu\+Enable}{m\_visuEnable}}
-{\footnotesize\ttfamily bool kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+visu\+Enable\hspace{0.3cm}{\ttfamily [private]}}
-
-To store visualization enable or disable status \mbox{\Hypertarget{classkpproc_1_1KpointExtractor_a1d7c3437fc6b2cff35d60df9f554dd12}\label{classkpproc_1_1KpointExtractor_a1d7c3437fc6b2cff35d60df9f554dd12}} 
-\index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR}}
+\subsubsection[{\texorpdfstring{m\+\_\+visu\+Enable}{m_visuEnable}}]{\setlength{\rightskip}{0pt plus 5cm}bool kpproc\+::\+Kpoint\+Extractor\+::m\+\_\+visu\+Enable\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointExtractor_ab0f534203a246814b163aa3dffeef1b5}{}\label{classkpproc_1_1KpointExtractor_ab0f534203a246814b163aa3dffeef1b5}
+To store visualization enable or disable status \index{kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}!M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR}}
 \index{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR}!kpproc\+::\+Kpoint\+Extractor@{kpproc\+::\+Kpoint\+Extractor}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR}{MIN\_KPOINT\_NBR}}
-{\footnotesize\ttfamily const unsigned int kpproc\+::\+Kpoint\+Extractor\+::\+M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR = 35\hspace{0.3cm}{\ttfamily [static]}}
-
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR}{MIN_KPOINT_NBR}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int kpproc\+::\+Kpoint\+Extractor\+::\+M\+I\+N\+\_\+\+K\+P\+O\+I\+N\+T\+\_\+\+N\+BR = 35\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classkpproc_1_1KpointExtractor_a1d7c3437fc6b2cff35d60df9f554dd12}{}\label{classkpproc_1_1KpointExtractor_a1d7c3437fc6b2cff35d60df9f554dd12}
 Minimum number of keypoints to consider this frame or image is useful 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

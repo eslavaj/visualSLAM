@@ -8,20 +8,11 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}{Kpoint\+Matcher} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Keypoint matcher constructor. \end{DoxyCompactList}\item 
 bool \hyperlink{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}{match} (const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints)
-\item 
+\begin{DoxyCompactList}\small\item\em This functions match the keypoints according their descriptors. Note this function matches considering descriptors first and then use homography to refine matches see \hyperlink{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}{refine\+Matches}. \end{DoxyCompactList}\item 
 void \hyperlink{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}{get\+Results} (std\+::vector$<$ cv\+::\+D\+Match $>$ \&matches, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Prev, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Curr)
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::vector$<$ cv\+::\+D\+Match $>$ \hyperlink{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}{m\+\_\+matches}
-\item 
-std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}{m\+\_\+refined\+Points\+Curr}
-\item 
-std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}{m\+\_\+refined\+Points\+Prev}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This functions retrieve the matches and the refined coordinates of the keypoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,17 +26,37 @@ static constexpr double \hyperlink{classkpproc_1_1KpointMatcher_a1efd51083ded961
 \begin{DoxyCompactItemize}
 \item 
 bool \hyperlink{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}{refine\+Matches} (const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints, std\+::vector$<$ cv\+::\+D\+Match $>$ \&refined\+Matches)
+\begin{DoxyCompactList}\small\item\em This functions refines matches by finding the most probable Homography (R\+A\+N\+S\+AC). Only the matches that are compliant with this Homography are kept. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+D\+Match $>$ \hyperlink{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}{m\+\_\+matches}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}{m\+\_\+refined\+Points\+Curr}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}{m\+\_\+refined\+Points\+Prev}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Keypoint matcher class\+: looks corresponding keypoints in two images 
+
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}\label{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}} 
 \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!Kpoint\+Matcher@{Kpoint\+Matcher}}
 \index{Kpoint\+Matcher@{Kpoint\+Matcher}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{Kpoint\+Matcher()}{KpointMatcher()}}
-{\footnotesize\ttfamily kpproc\+::\+Kpoint\+Matcher\+::\+Kpoint\+Matcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection[{\texorpdfstring{Kpoint\+Matcher()}{KpointMatcher()}}]{\setlength{\rightskip}{0pt plus 5cm}kpproc\+::\+Kpoint\+Matcher\+::\+Kpoint\+Matcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}{}\label{classkpproc_1_1KpointMatcher_a4a40c73477a60c38e5f12ed6f204ab9a}
 
-Here is the call graph for this function\+:\nopagebreak
+
+Keypoint matcher constructor. 
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -54,79 +65,139 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
+
+
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}\label{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}} 
 \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!get\+Results@{get\+Results}}
 \index{get\+Results@{get\+Results}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{get\+Results()}{getResults()}}
-{\footnotesize\ttfamily void Kpoint\+Matcher\+::get\+Results (\begin{DoxyParamCaption}\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{matches,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Prev,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Curr }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{get\+Results(std\+::vector$<$ cv\+::\+D\+Match $>$ \&matches, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Prev, std\+::vector$<$ cv\+::\+Point2f $>$ \&refined\+Points\+Curr)}{getResults(std::vector< cv::DMatch > &matches, std::vector< cv::Point2f > &refinedPointsPrev, std::vector< cv::Point2f > &refinedPointsCurr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kpoint\+Matcher\+::get\+Results (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{matches, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Prev, }
+\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{refined\+Points\+Curr}
+\end{DoxyParamCaption}
+)}\hypertarget{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}{}\label{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+This functions retrieve the matches and the refined coordinates of the keypoints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matches} & to store the matches \\
+\hline
+{\em refined\+Points\+Prev} & the refined coordinates for the keypoints of the previous image \\
+\hline
+{\em refined\+Points\+Curr} & the refined coordinates for the keypoints of the current image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classkpproc_1_1KpointMatcher_a02f6944a8401a2a14bb5ce42073389b0_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}\label{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}} 
+
+
 \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!match@{match}}
 \index{match@{match}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{match()}{match()}}
-{\footnotesize\ttfamily bool Kpoint\+Matcher\+::match (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{query\+Descriptors,  }\item[{const cv\+::\+Mat \&}]{train\+Descriptors,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{match(const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints)}{match(const cv::Mat &queryDescriptors, const cv::Mat &trainDescriptors, const std::vector< cv::KeyPoint > &queryKeypoints, const std::vector< cv::KeyPoint > &trainKeypoints)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Kpoint\+Matcher\+::match (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{query\+Descriptors, }
+\item[{const cv\+::\+Mat \&}]{train\+Descriptors, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}{}\label{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+This functions match the keypoints according their descriptors. Note this function matches considering descriptors first and then use homography to refine matches see \hyperlink{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}{refine\+Matches}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Descriptors} & the keypoints descriptors of the \char`\"{}previous\char`\"{} image \\
+\hline
+{\em train\+Descriptors} & the keypoints descriptors of the \char`\"{}current\char`\"{} image \\
+\hline
+{\em query\+Keypoints} & the keypoints of the \char`\"{}previous\char`\"{} image \\
+\hline
+{\em train\+Keypoints} & the keypoints of the \char`\"{}current\char`\"{} image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classkpproc_1_1KpointMatcher_a21caea2a00576784b2fc90dd652870ed_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}\label{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}} 
+
+
 \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!refine\+Matches@{refine\+Matches}}
 \index{refine\+Matches@{refine\+Matches}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{refine\+Matches()}{refineMatches()}}
-{\footnotesize\ttfamily bool Kpoint\+Matcher\+::refine\+Matches (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{query\+Descriptors,  }\item[{const cv\+::\+Mat \&}]{train\+Descriptors,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints,  }\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{refined\+Matches }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection[{\texorpdfstring{refine\+Matches(const cv\+::\+Mat \&query\+Descriptors, const cv\+::\+Mat \&train\+Descriptors, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&query\+Keypoints, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&train\+Keypoints, std\+::vector$<$ cv\+::\+D\+Match $>$ \&refined\+Matches)}{refineMatches(const cv::Mat &queryDescriptors, const cv::Mat &trainDescriptors, const std::vector< cv::KeyPoint > &queryKeypoints, const std::vector< cv::KeyPoint > &trainKeypoints, std::vector< cv::DMatch > &refinedMatches)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Kpoint\+Matcher\+::refine\+Matches (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{query\+Descriptors, }
+\item[{const cv\+::\+Mat \&}]{train\+Descriptors, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{query\+Keypoints, }
+\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{train\+Keypoints, }
+\item[{std\+::vector$<$ cv\+::\+D\+Match $>$ \&}]{refined\+Matches}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}{}\label{classkpproc_1_1KpointMatcher_a0d1681f55cfeea8a51bba9ccac41d346}
 
+
+This functions refines matches by finding the most probable Homography (R\+A\+N\+S\+AC). Only the matches that are compliant with this Homography are kept. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Descriptors} & the keypoints descriptors of the \char`\"{}previous\char`\"{} image \\
+\hline
+{\em train\+Descriptors} & the keypoints descriptors of the \char`\"{}current\char`\"{} image \\
+\hline
+{\em query\+Keypoints} & the keypoints of the \char`\"{}previous\char`\"{} image \\
+\hline
+{\em train\+Keypoints} & the keypoints of the \char`\"{}current\char`\"{} image \\
+\hline
+{\em refined\+Matches} & to store the the refined matches\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success. 
+\end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}\label{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}} 
 \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE@{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}}
 \index{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE@{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}{DIST\_TO\_EPILINE}}
-{\footnotesize\ttfamily constexpr double kpproc\+::\+Kpoint\+Matcher\+::\+D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE = 3.\+0\hspace{0.3cm}{\ttfamily [static]}}
-
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}\label{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}} 
-\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+matches@{m\+\_\+matches}}
+\subsubsection[{\texorpdfstring{D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE}{DIST_TO_EPILINE}}]{\setlength{\rightskip}{0pt plus 5cm}constexpr double kpproc\+::\+Kpoint\+Matcher\+::\+D\+I\+S\+T\+\_\+\+T\+O\+\_\+\+E\+P\+I\+L\+I\+NE = 3.\+0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}{}\label{classkpproc_1_1KpointMatcher_a1efd51083ded96127c34697340e5e92e}
+Maximal allowed distance to epipolar line to consider the point is in the epi. line \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+matches@{m\+\_\+matches}}
 \index{m\+\_\+matches@{m\+\_\+matches}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{m\+\_\+matches}{m\_matches}}
-{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+D\+Match $>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+matches}
-
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}\label{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}} 
-\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Curr@{m\+\_\+refined\+Points\+Curr}}
+\subsubsection[{\texorpdfstring{m\+\_\+matches}{m_matches}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+D\+Match $>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+matches\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}{}\label{classkpproc_1_1KpointMatcher_a082b2988b8e0381f2286dcaa1725a8db}
+The keypoint matches \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Curr@{m\+\_\+refined\+Points\+Curr}}
 \index{m\+\_\+refined\+Points\+Curr@{m\+\_\+refined\+Points\+Curr}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{m\+\_\+refined\+Points\+Curr}{m\_refinedPointsCurr}}
-{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Curr}
-
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}\label{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}} 
-\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Prev@{m\+\_\+refined\+Points\+Prev}}
+\subsubsection[{\texorpdfstring{m\+\_\+refined\+Points\+Curr}{m_refinedPointsCurr}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Curr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}{}\label{classkpproc_1_1KpointMatcher_a9a0c678dccf356d72b2a69542bcfe960}
+The refined coordinates for the keypoints of the previous image \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!m\+\_\+refined\+Points\+Prev@{m\+\_\+refined\+Points\+Prev}}
 \index{m\+\_\+refined\+Points\+Prev@{m\+\_\+refined\+Points\+Prev}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{m\+\_\+refined\+Points\+Prev}{m\_refinedPointsPrev}}
-{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Prev}
-
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}\label{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}} 
-\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}}
+\subsubsection[{\texorpdfstring{m\+\_\+refined\+Points\+Prev}{m_refinedPointsPrev}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$cv\+::\+Point2f$>$ kpproc\+::\+Kpoint\+Matcher\+::m\+\_\+refined\+Points\+Prev\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}{}\label{classkpproc_1_1KpointMatcher_ad21af067c2a5fa339aba9abe85fa943a}
+The refined coordinates for the keypoints of the current image \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}}
 \index{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}{MIN\_HOMOGR\_INLIERS\_NBR}}
-{\footnotesize\ttfamily const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR = 8\hspace{0.3cm}{\ttfamily [static]}}
-
-\mbox{\Hypertarget{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}\label{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}} 
-\index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR}{MIN_HOMOGR_INLIERS_NBR}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+H\+O\+M\+O\+G\+R\+\_\+\+I\+N\+L\+I\+E\+R\+S\+\_\+\+N\+BR = 8\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}{}\label{classkpproc_1_1KpointMatcher_a4d0c0de93ab29378a504265e263663f6}
+Minimum number of inliers according to the selected homography to consider this frame or image is useful \index{kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}!M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}}
 \index{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR@{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}!kpproc\+::\+Kpoint\+Matcher@{kpproc\+::\+Kpoint\+Matcher}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}{MIN\_KPMATCHS\_NBR}}
-{\footnotesize\ttfamily const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR = 16\hspace{0.3cm}{\ttfamily [static]}}
-
-
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR}{MIN_KPMATCHS_NBR}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int kpproc\+::\+Kpoint\+Matcher\+::\+M\+I\+N\+\_\+\+K\+P\+M\+A\+T\+C\+H\+S\+\_\+\+N\+BR = 16\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}{}\label{classkpproc_1_1KpointMatcher_a35b716145fb33b20b3ca2bfec10e343e}
+Minimum number of keypoints matches to consider this frame or image is useful 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

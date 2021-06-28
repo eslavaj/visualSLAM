@@ -82,7 +82,7 @@ private:
 
 
 
-//   ./slamPoc /home/jeslava/msata/cpp_work/img_processing/slamPoC/2011_09_26_2/2011_09_26_drive_0051_extract/image_00/data
+//   ./vodo /home/jeslava/msata/cpp_work/img_processing/slamPoC/2011_09_26_2/2011_09_26_drive_0051_extract/image_00/data
 
 
 

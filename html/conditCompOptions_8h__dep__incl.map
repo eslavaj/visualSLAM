@@ -1,8 +1,8 @@
 <map id="src/pose/conditCompOptions.h" name="src/pose/conditCompOptions.h">
 <area shape="rect" id="node2" href="$Frame_8hpp.html" title="src/frame/Frame.hpp" alt="" coords="864,80,1007,107"/>
-<area shape="rect" id="node3" href="$CameraPoseEstimator_8hpp.html" title="src/pose/CameraPoseEstimator.hpp" alt="" coords="382,155,615,181"/>
+<area shape="rect" id="node3" href="$CameraPoseEstimator_8hpp.html" title="src/pose/CameraPoseEstimator.hpp" alt="" coords="380,155,614,181"/>
 <area shape="rect" id="node8" href="$KpointExtractor_8hpp.html" title="Header file for lass to extract keypoints. " alt="" coords="731,155,922,181"/>
-<area shape="rect" id="node12" href="$KpointMatcher_8hpp.html" title="src/pose/KpointMatcher.hpp" alt="" coords="998,155,1183,181"/>
+<area shape="rect" id="node12" href="$KpointMatcher_8hpp.html" title="Header file for lass to match keypoints. " alt="" coords="998,155,1183,181"/>
 <area shape="rect" id="node10" href="$KpointProcessor_8hpp.html" title="src/pose/KpointProcessor.hpp" alt="" coords="946,237,1144,263"/>
 <area shape="rect" id="node4" href="$campose__caminput__main_8cpp.html" title="src/campose_caminput\l_main.cpp" alt="" coords="549,229,706,271"/>
 <area shape="rect" id="node5" href="$campose__images__kitty__main2_8cpp.html" title="src/campose_images\l_kitty_main2.cpp" alt="" coords="346,319,493,360"/>
