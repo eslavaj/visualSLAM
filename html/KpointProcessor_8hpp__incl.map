@@ -1,7 +1,0 @@
-<map id="src/pose/KpointProcessor.hpp" name="src/pose/KpointProcessor.hpp">
-<area shape="rect" id="node3" href="$KpointExtractor_8hpp.html" title="Header file for lass to extract keypoints. " alt="" coords="426,80,563,107"/>
-<area shape="rect" id="node9" href="$Frame_8hpp.html" title="Frame.hpp" alt="" coords="499,155,583,181"/>
-<area shape="rect" id="node12" href="$KpointMatcher_8hpp.html" title="Header file for lass to match keypoints. " alt="" coords="639,80,769,107"/>
-<area shape="rect" id="node4" href="$dataStructures_8h.html" title="dataStructures.h" alt="" coords="273,155,391,181"/>
-<area shape="rect" id="node11" href="$conditCompOptions_8h.html" title="conditCompOptions.h" alt="" coords="737,237,885,263"/>
-</map>

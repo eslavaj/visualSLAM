@@ -1,4 +1,0 @@
-<map id="kpproc::KpointMatcher::KpointMatcher" name="kpproc::KpointMatcher::KpointMatcher">
-<area shape="rect" id="node2" href="$classkpproc_1_1KpointMatcher.html#a21caea2a00576784b2fc90dd652870ed" title="This functions match the keypoints according their descriptors. Note this function matches considerin..." alt="" coords="207,5,360,47"/>
-<area shape="rect" id="node3" href="$classkpproc_1_1KpointMatcher.html#a02f6944a8401a2a14bb5ce42073389b0" title="This functions retrieve the matches and the refined coordinates of the keypoints. ..." alt="" coords="207,71,360,112"/>
-</map>

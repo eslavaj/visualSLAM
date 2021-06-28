@@ -1,8 +1,8 @@
-/*
- * KpointMatcher.cpp
+/**
  *
- *  Created on: Jun 26, 2021
- *      Author: jeslava
+ * @file KpointMatcher.cpp
+ * @brief file for keypoints matcher implementation.
+ *
  */
 
 
@@ -35,11 +35,8 @@ bool KpointMatcher::match(const cv::Mat & queryDescriptors, const cv::Mat & trai
 		}
 	}
 
-
-
     if(m_matches.size() < MIN_KPMATCHS_NBR)
     {
-    	std::cout << "----------------- "<< m_matches.size() << std::endl;
     	return false;
     }
     else
@@ -76,19 +73,11 @@ bool KpointMatcher::refineMatches(const cv::Mat & queryDescriptors, const cv::Ma
 
 	for (vector<cv::DMatch>::const_iterator it= m_matches.begin(); it!= m_matches.end(); it++)
 	{
-		/*
-		if(it->queryIdx<0)
-		{
-			cout<< "it->queryIdx: "<< it->queryIdx<<endl;
-			cout<< "it->trainIdx: "<< it->trainIdx<<endl;
-		}*/
-
 		// Get the position of previous (query) keypoints
 		queryPoints.push_back(queryKeypoints[it->queryIdx].pt);
 		// Get the position of current (train) keypoints
 		trainPoints.push_back(trainKeypoints[it->trainIdx].pt);
 	}
-
 
 	vector<uchar> inliers(queryPoints.size(),0);
 	outHomographMatrix = cv::findHomography(
@@ -127,12 +116,9 @@ void KpointMatcher::getResults(std::vector< cv::DMatch > & matches,
 							   std::vector<cv::Point2f> & refinedPointsPrev,
 							   std::vector<cv::Point2f> & refinedPointsCurr)
 {
-
 	matches = move(m_matches);
 	refinedPointsPrev = move(m_refinedPointsPrev);
 	refinedPointsCurr = move(m_refinedPointsCurr);
-
-
 }
 
 

@@ -1,7 +1,7 @@
 /**
  *
  * @file KpointMatcher.hpp
- * @brief  Header file for lass to match keypoints.
+ * @brief  Header file for class to match keypoints.
  *
  */
 

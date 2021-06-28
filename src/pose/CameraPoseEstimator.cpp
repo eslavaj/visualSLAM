@@ -1,12 +1,9 @@
-/*
- * CameraPoseEstimator.cpp
+/**
  *
- *  Created on: Jun 27, 2021
- *      Author: jeslava
+ * @file CameraPoseEstimator.cpp
+ * @brief  Implementation file for camera pose estimator.
+ *
  */
-
-#include "CameraPoseEstimator.hpp"
-
 
 #include <string>
 #include <iostream>
@@ -15,10 +12,10 @@
 #include <opencv2/viz/widgets.hpp>
 #include <opencv2/core/types.hpp>
 
+#include "CameraPoseEstimator.hpp"
 
 using namespace campose;
 using namespace std;
-
 
 bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPointsPrev,
 										 const vector<cv::Point2f> & refinedPointsCurr,
@@ -31,7 +28,6 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 	double t = (double)cv::getTickCount();
 	#endif
 
-
 	cv::Mat inliers;
 	cv::Mat essentialMatrix =
 			cv::findEssentialMat(refinedPointsPrev, refinedPointsCurr,
@@ -39,9 +35,7 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 			cv::RANSAC, 0.99, 1.0, // RANSAC method
 			inliers);             // extracted inliers
 
-
 	// recover relative camera pose from essential matrix
-	//cv::Mat rotation, translation;
 	cv::recoverPose(essentialMatrix,   // the essential matrix
 			refinedPointsPrev, refinedPointsCurr,        // the matched keypoints
 			m_camera.m_camMatrix,            // matrix of intrinsics
@@ -49,17 +43,15 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 			//cv::noArray());                // inliers matches
 			inliers);
 
-
 	int numberOfPtsPose = cv::sum(inliers)[0];
 	/*Check if camera has moved enough, if not then discard this frame*/
 	if(numberOfPtsPose < MIN_POSE_POINTS_NBR)
 	{
-		cout << "##################### " << numberOfPtsPose << endl;
+		//cout << "##################### " << numberOfPtsPose << endl;
 		//m_frameBuffer.pop_back();
 		//cv::waitKey(1000);
 		return false;
 	}
-
 
 	// to contain the inliers
 	std::vector<cv::Vec2d> prevInlierPts;
@@ -89,7 +81,6 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 	translVectorInv.at<double>(0,1) = (m_frameBuffer.end() - 1)->translationVector.at<double>(0,1)*(-1);
 	translVectorInv.at<double>(0,2) = (m_frameBuffer.end() - 1)->translationVector.at<double>(0,2)*(-1);
 	cv::Affine3d pose_tmp((m_frameBuffer.end() - 1)->rotationMatrix, translVectorInv);
-	//(m_frameBuffer.end() - 1)->m_pose = pose_tmp.concatenate((m_frameBuffer.end() - 2)->m_pose);
 	(m_frameBuffer.end() - 1)->m_pose = pose_tmp.concatenate(m_lastKnowPose);
 	m_lastKnowPose = (m_frameBuffer.end() - 1)->m_pose;
 
@@ -97,17 +88,14 @@ bool CameraPoseEstimator::calcCameraPose(const vector<cv::Point2f> & refinedPoin
 	t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
 	cout << "#### CALC POSE DONE IN " << 1000 * t / 1.0 << " ms" << endl;
 	#endif
-
 }
 
 
 void CameraPoseEstimator::visualize()
 {
 
-	//m_visualizer.removeAllWidgets();
 	m_visualizer.setBackgroundColor(cv::viz::Color::white());
 	int bufferCurrSize = m_frameBuffer.size();
-	//for(int i = 21; i>=2; i--)
 
 	static unsigned int i=0;
 
@@ -116,7 +104,6 @@ void CameraPoseEstimator::visualize()
 	cv::viz::WCameraPosition cam2(A_calib33f,  // matrix of intrinsics
 			(m_frameBuffer.end() - 1)->cameraImg,                             // image displayed on the plane
 			1.0,                                // scale factor
-			//cv::viz::Color::black());
 			cv::viz::Color::black());
 
 	string camiplus1 = "CameraC-" + std::to_string(-(-i+1));
@@ -124,16 +111,7 @@ void CameraPoseEstimator::visualize()
 	cv::Affine3d newPose = (m_frameBuffer.end() - 1)->m_pose;
 
 	m_visualizer.setWidgetPose(camiplus1, newPose);
-	//m_visualizer.setViewerPose(newPose);
 	i++;
-
-	/*
-	double rotViewer_elem[9] = {  1.0000000,  0.0000000,  0.0000000,
-			0.0000000,  0.0000000,  1.0000000,
-			0.0000000, -1.0000000,  0.0000000};
-	double rotViewer_elem[9] = {  1.0000000,  0.0000000,  0.0000000,
-			0.0000000,  0.0000000,  -1.0000000,
-			0.0000000, 1.0000000,  0.0000000};*/
 
 	double rotViewer_elem[9] = {  -1.0000000,  0.0000000,  0.0000000,
 			0.0000000,  0.0000000,  -1.0000000,
@@ -141,7 +119,6 @@ void CameraPoseEstimator::visualize()
 
 	cv::Mat rotViewer = cv::Mat(3, 3, CV_64F, rotViewer_elem);
 
-	//double translViewer_elem[3] = { -15, 45, -10}; //-90
 	double translViewer_elem[3] = { -0, 60, 1}; //-90
 	cv::Mat translViewer = cv::Mat(3, 1, CV_64F, translViewer_elem);
 	double cumulTransl_elem[3] = {(m_frameBuffer.end() - 1)->m_pose.translation().val[0],
@@ -151,13 +128,9 @@ void CameraPoseEstimator::visualize()
 	translViewer = translViewer + cumulTransl;
 
 	cv::Affine3d poseViewer(rotViewer, translViewer);
-	//poseViewer = (m_dataFrameBuffer.end() - 1)->pose.concatenate(poseViewer);
-	//poseViewer.rotation(rotViewer);
 	m_visualizer.setViewerPose(poseViewer);
-
-
 	m_visualizer.spinOnce(1,     // pause 1ms
-			false); // redraw
+						  false); // redraw
 }
 
 

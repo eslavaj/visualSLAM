@@ -1,7 +1,0 @@
-<map id="kpproc::KpointProcessor::KpointProcessor" name="kpproc::KpointProcessor::KpointProcessor">
-<area shape="rect" id="node2" href="$classkpproc_1_1KpointProcessor.html#a35bdf2239f6742875bbc64338488075a" title="kpproc::KpointProcessor\l::process" alt="" coords="219,104,384,145"/>
-<area shape="rect" id="node3" href="$classkpproc_1_1KpointExtractor.html#ade1efa4e540390775ed7158f57ca9618" title="This functions detect keypoints and generate descriptors. " alt="" coords="432,5,607,47"/>
-<area shape="rect" id="node4" href="$classkpproc_1_1KpointExtractor.html#a167e3596663206cb24e9eefe54baf4be" title="This function retrieve keypoints and their descriptors. " alt="" coords="440,71,599,112"/>
-<area shape="rect" id="node5" href="$classkpproc_1_1KpointMatcher.html#a21caea2a00576784b2fc90dd652870ed" title="This functions match the keypoints according their descriptors. Note this function matches considerin..." alt="" coords="443,136,596,177"/>
-<area shape="rect" id="node6" href="$classkpproc_1_1KpointMatcher.html#a02f6944a8401a2a14bb5ce42073389b0" title="This functions retrieve the matches and the refined coordinates of the keypoints. ..." alt="" coords="443,201,596,243"/>
-</map>
