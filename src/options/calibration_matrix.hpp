@@ -1,8 +1,8 @@
-/*
- * calibration_matrix.hpp
+/**
  *
- *  Created on: Aug 1, 2020
- *      Author: jeslava
+ * @file calibration_matrix.hpp
+ * @brief  Header file to store camera calibration matrix.
+ *
  */
 
 #ifndef CALIBRATION_MATRIX_HPP_

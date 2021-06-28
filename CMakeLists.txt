@@ -14,7 +14,7 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 find_package(OpenCV REQUIRED)
 find_package(Boost REQUIRED)
 
-include_directories(${OpenCV_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS} src/frame src/pose)
+include_directories(${OpenCV_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS} src/frame src/pose src/options)
 link_directories(${OpenCV_LIBRARY_DIRS} ${Boost_LIBRARY_DIRS})
 add_definitions(${OpenCV_DEFINITIONS} ${Boost_DEFINITIONS})
 
