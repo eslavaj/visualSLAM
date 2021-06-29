@@ -1,12 +1,8 @@
 cmake_minimum_required (VERSION 2.6)
 
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
 project(vodo)
 
-add_definitions(-std=c++14)
+add_definitions(-std=c++11)
 
 set(CXX_FLAGS "-Wall -Wno-psabi -pthread")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
